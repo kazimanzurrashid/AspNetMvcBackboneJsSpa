@@ -135,6 +135,7 @@
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\BackboneTemplate.vstemplate">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Content\application.css">
       <IncludeInVSIX>true</IncludeInVSIX>

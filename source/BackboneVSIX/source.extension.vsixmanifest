@@ -4,7 +4,7 @@
     <Identity Id="BackboneJS..f99e35a4-46a9-4182-bd1a-f7df044f5830" Version="1.0" Language="en-US" Publisher="Kazi Manzur Rashid" />
     <DisplayName>BackboneJS SPA Template</DisplayName>
     <Description xml:space="preserve">Backbone.js SPA Template for ASP.NET MVC 4.</Description>
-    <MoreInfo>http://kazimanzurrashid.com</MoreInfo>
+    <MoreInfo>https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa</MoreInfo>
     <Icon>__VsixIcon.ico</Icon>
     <PreviewImage>ProjectTemplates\backbone.png</PreviewImage>
     <Tags>Backbone.js Twitter Bootstrap FontAwesome SPA</Tags>
