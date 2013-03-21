@@ -1,0 +1,36 @@
+﻿@functions {
+  string PageTitle() {
+
+    var title = ViewBag.Title ?? string.Empty;
+
+    if (!string.IsNullOrWhiteSpace(title))
+    {
+      title += " - ";
+    }
+
+    title += "My Backbone.js App";
+
+    return title;
+  }
+}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  @Html.Partial("Head")
+  <title>@Html.Raw(PageTitle())</title>
+</head>
+<body>
+  @Html.Partial("LegacyIE")
+  @Html.Partial("Flashbar")
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="~/" class="brand">My Backbone.js App</a>
+      @RenderSection("Navigation", required: false)
+    </div>
+  </header>
+  @RenderBody()
+  @Html.Partial("Footer")
+  @Html.Partial("Scripts")
+  @RenderSection("Scripts", required: false)
+</body>
+</html>
