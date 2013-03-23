@@ -1,12 +1,13 @@
-namespace BackboneTemplate.Models
+namespace $safeprojectname$.Models
 {
-    public class ValidationSummaryModel
+    public class ValidationSummary
     {
-        public ValidationSummaryModel()
+        public ValidationSummary()
         {
             Title = "Error!";
             Closable = true;
             Message = "Please correct the following errors.";
+            ExcludePropertyErrors = true;            
         }
 
         public string Title { get; set; }

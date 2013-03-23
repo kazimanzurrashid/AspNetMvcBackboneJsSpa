@@ -4,7 +4,7 @@ var Application;
         var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
         Models.Validation = {
             addError: function (errors, attribute, message) {
-                (errors[attribute] || (errors[attribute] = [])).push(message);
+                return (errors[attribute] || (errors[attribute] = [])).push(message);
             },
             isValidEmailFormat: function (value) {
                 return value && emailRegex.test(value);

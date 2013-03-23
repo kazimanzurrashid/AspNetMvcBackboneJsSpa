@@ -30,12 +30,11 @@ var Application;
                 e.preventDefault();
                 this.changePasswordForm.hideSummaryError().hideFieldErrors();
                 var model = new Application.Models.ChangePassword();
-                var invalidHandler = function () {
-                    _this.changePasswordForm.showFieldErrors({
+                model.on('invalid', function () {
+                    return _this.changePasswordForm.showFieldErrors({
                         errors: (model).validationError.errors
                     });
-                };
-                model.on('invalid', invalidHandler);
+                });
                 (model).save(this.changePasswordForm.serializeFields(), {
                     success: function () {
                         _this.$el.modal('hide');
@@ -62,7 +61,7 @@ var Application;
                 $.confirm({
                     prompt: 'Are you sure you want to sign out?',
                     ok: function () {
-                        (new Application.Models.Session({
+                        return (new Application.Models.Session({
                             id: Date.now()
                         })).destroy({
                             success: function () {

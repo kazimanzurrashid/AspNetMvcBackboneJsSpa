@@ -15,26 +15,33 @@ module Application {
         homeView: Views.Page;
         aboutView: Views.Page;
         notFoundView: Views.NotFound;
-        views: Views.IActivable[];
+        currentView: Views.IActivable;
 
         about() {
-            this.activate(this.aboutView);
-            this.navigationView.select('about');
+            this.activate(this.aboutView, 'about');
         }
 
         home() {
-            this.activate(this.homeView);
-            this.navigationView.select('home');
+            this.activate(this.homeView, 'home');
         }
 
         notFound() {
-            this.navigationView.deselectAll();
             this.activate(this.notFoundView);
         }
 
-        activate(view: Backbone.View) {
-            _.each(this.views, (view: Views.IActivable) => view.deactivate());
-            (<Views.IActivable><any>view).activate();
+        activate(view: Backbone.View, menu?: string) {
+            if (this.currentView) {
+                this.currentView.deactivate();
+            }
+
+            if (menu) {
+                this.navigationView.select(menu);
+            } else {
+                this.navigationView.deselectAll();
+            }
+
+            this.currentView = <Views.IActivable><any>view;
+            this.currentView.activate();
         }
 
         initialize() {
@@ -42,32 +49,27 @@ module Application {
 
             var pageTemplate = _.template($('#page-template').html());
 
-            this.views = [];
-
             this.homeView = new Views.Page({
                 className: 'page',
                 template: pageTemplate,
                 model: new Backbone.Model({
                     title: 'Home',
-                    message: 'Welcome to Backbone SPA.'
+                    message: 'Welcome to Backbone.js SPA.'
                 })
             }).render();
-            this.views.push(<Views.IActivable><any>this.homeView);
 
             this.aboutView = new Views.Page({
                 className: 'page',
                 template: pageTemplate,
                 model: new Backbone.Model({
                     title: 'About',
-                    message: 'Tell about your app.'
+                    message: 'Tell us about your app.'
                 })
             }).render();
-            this.views.push(<Views.IActivable><any>this.aboutView);
 
             $('#container').prepend(this.homeView.$el, this.aboutView.$el);
 
             this.notFoundView = new Views.NotFound;
-            this.views.push(<Views.IActivable><any>this.notFoundView);
         }
     }
 

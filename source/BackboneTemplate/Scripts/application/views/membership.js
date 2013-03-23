@@ -39,9 +39,9 @@ var Application;
                         }
                     }
                 });
-                Application.events.on('requiresSignIn', function (e) {
-                    _this.ok = (e && _.isFunction(e.ok)) ? e.ok : null;
-                    _this.cancel = (e && _.isFunction(e.cancel)) ? e.cancel : null;
+                Application.events.on('showMembership', function (e) {
+                    _this.ok = (e && _.isFunction(e.ok)) ? e.ok : void (0);
+                    _this.cancel = (e && _.isFunction(e.cancel)) ? e.cancel : void (0);
                     tabHeaders.first().trigger('click');
                     _this.$el.modal('show');
                 });
@@ -54,13 +54,12 @@ var Application;
         })(Backbone.View);
         Views.Membership = Membership;        
         Membership.prototype.el = '#membership-dialog';
-        function subscribeModelInvalidEvent(model, element) {
-            var invalidHandler = function () {
-                element.showFieldErrors({
+        function subscribeModelInvalidEvent(model, el) {
+            model.on('invalid', function () {
+                return el.showFieldErrors({
                     errors: (model).validationError.errors
                 });
-            };
-            model.on('invalid', invalidHandler);
+            });
         }
         var SignIn = (function (_super) {
             __extends(SignIn, _super);

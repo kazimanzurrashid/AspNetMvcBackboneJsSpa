@@ -65,7 +65,7 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="ResetPassword.cs">ResetPassword.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UsersContext.cs">UsersContext.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="ValidationSummaryModel.cs">ValidationSummaryModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValidationSummary.cs">ValidationSummary.cs</ProjectItem>
       </Folder>
       <Folder Name="Properties" TargetFolderName="Properties">
         <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>

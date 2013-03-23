@@ -49,9 +49,9 @@ module Application.Views {
                     }
                 });
 
-            events.on('requiresSignIn', (e: IRequiresSignInEventArgs) => {
-                this.ok = (e && _.isFunction(e.ok)) ? e.ok : null;
-                this.cancel = (e && _.isFunction(e.cancel)) ? e.cancel : null;
+            events.on('showMembership', (e: IRequiresSignInEventArgs) => {
+                this.ok = (e && _.isFunction(e.ok)) ? e.ok : void(0);
+                this.cancel = (e && _.isFunction(e.cancel)) ? e.cancel : void(0);
                 tabHeaders.first().trigger('click');
                 this.$el.modal('show');
             });
@@ -65,17 +65,12 @@ module Application.Views {
 
     Membership.prototype.el = <HTMLElement><any>'#membership-dialog';
 
-    function subscribeModelInvalidEvent(
-        model: Backbone.Model,
-        element: JQuery)
-    {
-        var invalidHandler = () => {
-            element.showFieldErrors({
+    function subscribeModelInvalidEvent(model: Backbone.Model, el: JQuery) {
+        model.on('invalid', () =>
+            el.showFieldErrors({
                 errors: (<any>model).validationError.errors
-            });
-        };
-
-        model.on('invalid', invalidHandler);
+            })
+        );
     }
 
     export class SignIn extends Backbone.View {

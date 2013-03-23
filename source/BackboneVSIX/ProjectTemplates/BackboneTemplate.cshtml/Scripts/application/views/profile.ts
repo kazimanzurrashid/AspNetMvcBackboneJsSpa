@@ -36,13 +36,12 @@ module Application.Views {
                 .hideFieldErrors();
 
             var model = new Models.ChangePassword;
-            var invalidHandler = () => {
+
+            model.on('invalid', () =>
                 this.changePasswordForm.showFieldErrors({
                     errors: (<any>model).validationError.errors
-                });
-            };
-
-            model.on('invalid', invalidHandler);
+                })
+            );
 
             (<any>model).save(this.changePasswordForm.serializeFields(), {
                 success: () => {
@@ -72,11 +71,10 @@ module Application.Views {
 
             $.confirm({
                 prompt: 'Are you sure you want to sign out?',
-                ok: () => {
+                ok: () =>
                     (new Models.Session({ id: Date.now() })).destroy({
                         success: () => events.trigger('signedOut')
-                    });
-                }
+                    })
             });
         }
     }

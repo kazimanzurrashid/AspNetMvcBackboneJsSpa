@@ -41,7 +41,7 @@ module Application {
 
     function attachEventHandlers() {
         events.on('myAccount', () => {
-            var eventName = userSignnedIn ? 'showProfile' : 'requiresSignIn';
+            var eventName = userSignnedIn ? 'showProfile' : 'showMembership';
             events.trigger(eventName);
         });
 
@@ -69,7 +69,6 @@ module Application {
 
         events.on('signedOut', () => {
             userSignnedIn = false;
-            redirectToDefault();
             showInfobar('You are now signed out.');
         });
     }

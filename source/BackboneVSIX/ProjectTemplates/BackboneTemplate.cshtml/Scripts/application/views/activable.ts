@@ -7,7 +7,7 @@ module Application.Views {
         deactivate(): void;
     }
 
-    var animationDuration = 600;
+    var animationDuration = 400;
 
     export var Activable = {
         activate: function () {
@@ -19,7 +19,7 @@ module Application.Views {
                   .hide()
                   .show(() => {
                       el.animate({ marginLeft: 0 }, animationDuration, () => {
-                          this.animationTimer = null;
+                          this.animationTimer = void(0);
                           if (_.isFunction(this.onActivate)) {
                               this.onActivate();
                           }
@@ -39,7 +39,7 @@ module Application.Views {
         clearAnimationTimer: function () {
             if (this.animationTimer) {
                 clearTimeout(this.animationTimer);
-                this.animationTimer = null;
+                this.animationTimer = void(0);
             }
         }
     };

@@ -121,9 +121,6 @@
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\UsersContext.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummaryModel.cs">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Properties\AssemblyInfo.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -132,6 +129,7 @@
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\BackboneTemplate.csproj">
       <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\BackboneTemplate.vstemplate">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -422,7 +420,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummary.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

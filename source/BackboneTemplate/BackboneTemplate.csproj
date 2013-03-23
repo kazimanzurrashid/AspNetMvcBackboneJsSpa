@@ -152,7 +152,7 @@
     <Compile Include="Models\ResetPassword.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UsersContext.cs" />
-    <Compile Include="Models\ValidationSummaryModel.cs" />
+    <Compile Include="Models\ValidationSummary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,68 +168,17 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\application.less" />
-    <Content Include="Scripts\application\application.d.ts" />
-    <Content Include="Scripts\application\models\changepassword.js">
-      <DependentUpon>changepassword.ts</DependentUpon>
-    </Content>
     <Content Include="Scripts\backbone.js" />
     <Content Include="Scripts\backbone.min.js">
       <DependentUpon>backbone.js</DependentUpon>
     </Content>
-    <Content Include="Content\less\wells.less" />
-    <Content Include="Content\less\variables.less" />
-    <Content Include="Content\less\utilities.less" />
-    <Content Include="Content\less\type.less" />
-    <Content Include="Content\less\tooltip.less" />
-    <Content Include="Content\less\thumbnails.less" />
-    <Content Include="Content\less\tables.less" />
-    <Content Include="Content\less\sprites.less" />
-    <Content Include="Content\less\scaffolding.less" />
-    <Content Include="Content\less\responsive-utilities.less" />
-    <Content Include="Content\less\responsive-navbar.less" />
-    <Content Include="Content\less\responsive-768px-979px.less" />
-    <Content Include="Content\less\responsive-767px-max.less" />
-    <Content Include="Content\less\responsive-1200px-min.less" />
-    <Content Include="Content\less\responsive.less" />
-    <Content Include="Content\less\reset.less" />
-    <Content Include="Content\less\progress-bars.less" />
-    <Content Include="Content\less\popovers.less" />
-    <Content Include="Content\less\pagination.less" />
-    <Content Include="Content\less\pager.less" />
-    <Content Include="Content\less\navs.less" />
-    <Content Include="Content\less\navbar.less" />
-    <Content Include="Content\less\modals.less" />
-    <Content Include="Content\less\mixins.less" />
-    <Content Include="Content\less\media.less" />
-    <Content Include="Content\less\layouts.less" />
-    <Content Include="Content\less\labels-badges.less" />
-    <Content Include="Content\less\hero-unit.less" />
-    <Content Include="Content\less\grid.less" />
-    <Content Include="Content\less\forms.less" />
-    <Content Include="Content\less\dropdowns.less" />
-    <Content Include="Content\less\component-animations.less" />
-    <Content Include="Content\less\code.less" />
-    <Content Include="Content\less\close.less" />
-    <Content Include="Content\less\carousel.less" />
-    <Content Include="Content\less\buttons.less" />
-    <Content Include="Content\less\button-groups.less" />
-    <Content Include="Content\less\breadcrumbs.less" />
-    <Content Include="Content\less\bootstrap.less" />
-    <Content Include="Content\less\alerts.less" />
-    <Content Include="Content\less\accordion.less" />
-    <Content Include="Content\less\font-awesome-ie7.less" />
-    <Content Include="Content\less\font-awesome.less" />
-    <Content Include="Content\font\fontawesome-webfont.woff" />
-    <Content Include="Content\font\fontawesome-webfont.ttf" />
-    <Content Include="Content\font\fontawesome-webfont.eot" />
-    <Content Include="Content\font\FontAwesome.otf" />
-    <None Include="Scripts\jquery-1.9.1.intellisense.js">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
-    </None>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js">
       <DependentUpon>bootstrap.js</DependentUpon>
     </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    </None>
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js">
       <DependentUpon>jquery-1.9.1.js</DependentUpon>
@@ -270,22 +219,22 @@
     <Content Include="Views\Shared\ValidationSummary.cshtml">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Scripts\jquery-1.9.1.min.map">
-      <DependentUpon>jquery-1.9.1.js</DependentUpon>
+    <Content Include="Scripts\application\models\changepassword.js">
+      <DependentUpon>changepassword.ts</DependentUpon>
     </Content>
     <TypeScriptCompile Include="Scripts\application\models\changepassword.ts" />
     <Content Include="Scripts\application\models\forgotpassword.js">
       <DependentUpon>forgotpassword.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\application\models\forgotpassword.ts" />
+    <TypeScriptCompile Include="Scripts\application\models\forgotpassword.ts" />
     <Content Include="Scripts\application\models\session.js">
       <DependentUpon>session.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\application\models\session.ts" />
+    <TypeScriptCompile Include="Scripts\application\models\session.ts" />
     <Content Include="Scripts\application\models\user.js">
       <DependentUpon>user.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\application\models\user.ts" />
+    <TypeScriptCompile Include="Scripts\application\models\user.ts" />
     <Content Include="Scripts\application\models\validation.js">
       <DependentUpon>validation.ts</DependentUpon>
     </Content>
@@ -296,19 +245,12 @@
     <Content Include="Scripts\application\views\membership.js">
       <DependentUpon>membership.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\application\views\membership.ts" />
+    <TypeScriptCompile Include="Scripts\application\views\membership.ts" />
     <Content Include="Scripts\application\views\profile.js">
       <DependentUpon>profile.ts</DependentUpon>
     </Content>
-    <Content Include="Scripts\application\views\profile.ts" />
-    <Content Include="Views\ClientViews\_NotFound.cshtml" />
-    <Content Include="Views\ClientViews\_SignOut.cshtml" />
-    <Content Include="Views\ClientViews\_ChangePassword.cshtml" />
-    <Content Include="Views\ClientViews\Profile.cshtml" />
-    <Content Include="Views\ClientViews\_ForgotPassword.cshtml" />
-    <Content Include="Views\ClientViews\_SignIn.cshtml" />
-    <Content Include="Views\ClientViews\_SignUp.cshtml" />
-    <Content Include="Views\ClientViews\Membership.cshtml" />
+    <TypeScriptCompile Include="Scripts\application\views\profile.ts" />
+    <Content Include="Scripts\application\application.d.ts" />
     <TypeScriptCompile Include="Scripts\application\application.ts" />
     <Content Include="Scripts\application\application.js">
       <DependentUpon>application.ts</DependentUpon>
@@ -347,9 +289,7 @@
       <DependentUpon>page.ts</DependentUpon>
     </Content>
     <Content Include="Scripts\_config.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -369,6 +309,14 @@
     </Content>
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\Navigation.cshtml" />
+    <Content Include="Views\ClientViews\_NotFound.cshtml" />
+    <Content Include="Views\ClientViews\_SignOut.cshtml" />
+    <Content Include="Views\ClientViews\_ChangePassword.cshtml" />
+    <Content Include="Views\ClientViews\Profile.cshtml" />
+    <Content Include="Views\ClientViews\_ForgotPassword.cshtml" />
+    <Content Include="Views\ClientViews\_SignIn.cshtml" />
+    <Content Include="Views\ClientViews\_SignUp.cshtml" />
+    <Content Include="Views\ClientViews\Membership.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -376,6 +324,60 @@
   <ItemGroup>
     <Content Include="packages.config">
       <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\font\fontawesome-webfont.eot" />
+    <Content Include="Content\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\font\FontAwesome.otf" />
+    <Content Include="Content\less\accordion.less" />
+    <Content Include="Content\less\alerts.less" />
+    <Content Include="Content\less\bootstrap.less" />
+    <Content Include="Content\less\breadcrumbs.less" />
+    <Content Include="Content\less\button-groups.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\carousel.less" />
+    <Content Include="Content\less\close.less" />
+    <Content Include="Content\less\code.less" />
+    <Content Include="Content\less\component-animations.less" />
+    <Content Include="Content\less\dropdowns.less" />
+    <Content Include="Content\less\font-awesome-ie7.less" />
+    <Content Include="Content\less\font-awesome.less" />
+    <Content Include="Content\less\forms.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\hero-unit.less" />
+    <Content Include="Content\less\labels-badges.less" />
+    <Content Include="Content\less\layouts.less" />
+    <Content Include="Content\less\media.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\modals.less" />
+    <Content Include="Content\less\navbar.less" />
+    <Content Include="Content\less\navs.less" />
+    <Content Include="Content\less\pager.less" />
+    <Content Include="Content\less\pagination.less" />
+    <Content Include="Content\less\popovers.less" />
+    <Content Include="Content\less\progress-bars.less" />
+    <Content Include="Content\less\reset.less" />
+    <Content Include="Content\less\responsive-1200px-min.less" />
+    <Content Include="Content\less\responsive-767px-max.less" />
+    <Content Include="Content\less\responsive-768px-979px.less" />
+    <Content Include="Content\less\responsive-navbar.less" />
+    <Content Include="Content\less\responsive-utilities.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\scaffolding.less" />
+    <Content Include="Content\less\sprites.less" />
+    <Content Include="Content\less\tables.less" />
+    <Content Include="Content\less\thumbnails.less" />
+    <Content Include="Content\less\tooltip.less" />
+    <Content Include="Content\less\type.less" />
+    <Content Include="Content\less\utilities.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\wells.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.9.1.min.map">
+      <DependentUpon>jquery-1.9.1.js</DependentUpon>
     </Content>
   </ItemGroup>
   <PropertyGroup>

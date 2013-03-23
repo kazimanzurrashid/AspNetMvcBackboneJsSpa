@@ -1,7 +1,7 @@
 var Application;
 (function (Application) {
     (function (Views) {
-        var animationDuration = 600;
+        var animationDuration = 400;
         Views.Activable = {
             activate: function () {
                 var _this = this;
@@ -14,7 +14,7 @@ var Application;
                         el.animate({
                             marginLeft: 0
                         }, animationDuration, function () {
-                            _this.animationTimer = null;
+                            _this.animationTimer = void (0);
                             if(_.isFunction(_this.onActivate)) {
                                 _this.onActivate();
                             }
@@ -32,7 +32,7 @@ var Application;
             clearAnimationTimer: function () {
                 if(this.animationTimer) {
                     clearTimeout(this.animationTimer);
-                    this.animationTimer = null;
+                    this.animationTimer = void (0);
                 }
             }
         };

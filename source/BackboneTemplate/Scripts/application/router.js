@@ -13,48 +13,47 @@ var Application;
 
         }
         Router.prototype.about = function () {
-            this.activate(this.aboutView);
-            this.navigationView.select('about');
+            this.activate(this.aboutView, 'about');
         };
         Router.prototype.home = function () {
-            this.activate(this.homeView);
-            this.navigationView.select('home');
+            this.activate(this.homeView, 'home');
         };
         Router.prototype.notFound = function () {
-            this.navigationView.deselectAll();
             this.activate(this.notFoundView);
         };
-        Router.prototype.activate = function (view) {
-            _.each(this.views, function (view) {
-                return view.deactivate();
-            });
-            (view).activate();
+        Router.prototype.activate = function (view, menu) {
+            if(this.currentView) {
+                this.currentView.deactivate();
+            }
+            if(menu) {
+                this.navigationView.select(menu);
+            } else {
+                this.navigationView.deselectAll();
+            }
+            this.currentView = view;
+            this.currentView.activate();
         };
         Router.prototype.initialize = function () {
             this.navigationView = new Application.Views.Navigation();
             var pageTemplate = _.template($('#page-template').html());
-            this.views = [];
             this.homeView = new Application.Views.Page({
                 className: 'page',
                 template: pageTemplate,
                 model: new Backbone.Model({
                     title: 'Home',
-                    message: 'Welcome to Backbone SPA.'
+                    message: 'Welcome to Backbone.js SPA.'
                 })
             }).render();
-            this.views.push(this.homeView);
             this.aboutView = new Application.Views.Page({
                 className: 'page',
                 template: pageTemplate,
                 model: new Backbone.Model({
                     title: 'About',
-                    message: 'Tell about your app.'
+                    message: 'Tell us about your app.'
                 })
             }).render();
-            this.views.push(this.aboutView);
             $('#container').prepend(this.homeView.$el, this.aboutView.$el);
             this.notFoundView = new Application.Views.NotFound();
-            this.views.push(this.notFoundView);
         };
         return Router;
     })(Backbone.Router);

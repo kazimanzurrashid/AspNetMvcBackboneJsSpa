@@ -2,7 +2,7 @@
 @model dynamic
 @if (!Html.ViewData.ModelState.IsValid) {
 
-  var model = Model as ValidationSummaryModel ?? new ValidationSummaryModel();
+  var model = Model as ValidationSummary ?? new ValidationSummary();
   var modelStates = Html.ViewData.ModelState.ToList();
 
   if (model.ExcludePropertyErrors) {

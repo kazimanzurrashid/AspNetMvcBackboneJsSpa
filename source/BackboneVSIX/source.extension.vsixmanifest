@@ -59,7 +59,7 @@
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ResetPassword.cs" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\User.cs" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\UsersContext.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummaryModel.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummary.cs" />
 
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Properties\AssemblyInfo.cs" />
 

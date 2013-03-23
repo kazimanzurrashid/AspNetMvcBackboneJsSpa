@@ -28,7 +28,7 @@ var Application;
     }
     function attachEventHandlers() {
         Application.events.on('myAccount', function () {
-            var eventName = userSignnedIn ? 'showProfile' : 'requiresSignIn';
+            var eventName = userSignnedIn ? 'showProfile' : 'showMembership';
             Application.events.trigger(eventName);
         });
         Application.events.on('signedIn', function () {
@@ -48,7 +48,6 @@ var Application;
         });
         Application.events.on('signedOut', function () {
             userSignnedIn = false;
-            redirectToDefault();
             showInfobar('You are now signed out.');
         });
     }
