@@ -24,6 +24,8 @@ module Application.Views {
 
         initialize(options: PageOptions) {
             this.template = options.template;
+            (<any>this).listenTo(this.model, 'change', this.render);
+            (<any>this).listenTo(this.model, 'destroy', this.remove);
         }
     }
 

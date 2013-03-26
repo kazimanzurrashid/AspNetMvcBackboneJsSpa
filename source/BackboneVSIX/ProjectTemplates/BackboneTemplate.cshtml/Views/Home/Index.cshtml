@@ -6,7 +6,7 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div id="container" class="span12" role="main">
-      @Html.ClientView("NotFound")
+      @{ Html.IncludeClientViews(); }
     </div>
   </div>
   <script id="page-template" type="text/html">
@@ -14,7 +14,6 @@
     <p>{{message}}</p>
   </script>
 </div>
-@{ Html.IncludeClientViews(); }
 @section Scripts {
   @Scripts.Render("~/bundles/backbone", "~/bundles/application")
   <script>

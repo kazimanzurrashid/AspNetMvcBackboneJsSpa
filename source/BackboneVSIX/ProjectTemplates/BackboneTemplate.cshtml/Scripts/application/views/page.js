@@ -17,6 +17,8 @@ var Application;
             };
             Page.prototype.initialize = function (options) {
                 this.template = options.template;
+                (this).listenTo(this.model, 'change', this.render);
+                (this).listenTo(this.model, 'destroy', this.remove);
             };
             return Page;
         })(Backbone.View);

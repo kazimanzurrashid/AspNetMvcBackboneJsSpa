@@ -171,11 +171,11 @@
   <ItemGroup>
     <Content Include="Views\ClientViews\_ChangePassword.cshtml" />
     <Content Include="Views\ClientViews\_ForgotPassword.cshtml" />
-    <Content Include="Views\ClientViews\_NotFound.cshtml" />
     <Content Include="Views\ClientViews\_SignIn.cshtml" />
     <Content Include="Views\ClientViews\_SignOut.cshtml" />
     <Content Include="Views\ClientViews\_SignUp.cshtml" />
     <Content Include="Views\ClientViews\Membership.cshtml" />
+    <Content Include="Views\ClientViews\NotFound.cshtml" />
     <Content Include="Views\ClientViews\Profile.cshtml" />
     <Content Include="Views\Emails\_ViewStart.cshtml" />
     <Content Include="Views\Emails\ForgotPassword.cshtml" />

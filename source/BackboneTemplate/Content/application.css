@@ -5832,11 +5832,12 @@ a.badge:focus {
 }
 #container {
   overflow: hidden;
-  min-height: 320px;
+  min-height: 380px;
 }
 #container .page {
   display: none;
   position: relative;
+  overflow: hidden;
 }
 .modal-section + .modal-section {
   border-top: 1px solid #eeeeee;

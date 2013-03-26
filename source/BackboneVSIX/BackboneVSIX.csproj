@@ -310,7 +310,7 @@
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ForgotPassword.cshtml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_NotFound.cshtml">
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\NotFound.cshtml">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignIn.cshtml">

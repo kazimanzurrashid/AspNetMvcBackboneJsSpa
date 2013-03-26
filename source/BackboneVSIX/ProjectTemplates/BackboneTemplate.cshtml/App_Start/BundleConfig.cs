@@ -22,10 +22,11 @@
                 .Include("~/Scripts/bootstrap.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/backbone")
-                .Include("~/Scripts/underscore.js", "~/Scripts/_config.js")
+                .Include("~/Scripts/underscore.js")
                 .Include("~/Scripts/Backbone.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/application")
+                .Include("~/Scripts/_config.js")
                 .IncludeDirectory("~/Scripts/application", "*.js", true));
         }
     }

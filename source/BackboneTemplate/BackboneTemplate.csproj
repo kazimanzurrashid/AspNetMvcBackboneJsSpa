@@ -309,7 +309,7 @@
     </Content>
     <Content Include="Views\Shared\Footer.cshtml" />
     <Content Include="Views\Home\Navigation.cshtml" />
-    <Content Include="Views\ClientViews\_NotFound.cshtml" />
+    <Content Include="Views\ClientViews\NotFound.cshtml" />
     <Content Include="Views\ClientViews\_SignOut.cshtml" />
     <Content Include="Views\ClientViews\_ChangePassword.cshtml" />
     <Content Include="Views\ClientViews\Profile.cshtml" />

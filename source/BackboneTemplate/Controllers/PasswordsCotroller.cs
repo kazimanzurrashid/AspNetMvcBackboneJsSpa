@@ -6,10 +6,10 @@
     using System.Threading.Tasks;
     using System.Web.Http;
 
+    using WebMatrix.WebData;
+
     using Infrastructure;
     using Models;
-
-    using WebMatrix.WebData;
 
     public class PasswordsController : ApiController
     {

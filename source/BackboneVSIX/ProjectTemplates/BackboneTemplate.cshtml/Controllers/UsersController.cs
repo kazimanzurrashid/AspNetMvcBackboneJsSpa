@@ -4,6 +4,7 @@
     using System.Net;
     using System.Net.Http;
     using System.Threading.Tasks;
+    using System.Web;
     using System.Web.Http;
     using System.Web.Security;
 
@@ -14,26 +15,43 @@
 
     public class UsersController : ApiController
     {
-        private readonly Func<string, string, string> signup;
+        private readonly Func<string, string, bool, string> signup;
         private readonly IMailer mailer;
 
         public UsersController()
             : this(
-                (userName, password) =>
+                (userName, password, requireConfirmation) =>
                     WebSecurity.CreateUserAndAccount(
                     userName,
                     password,
-                    requireConfirmationToken: true),
+                    requireConfirmationToken: requireConfirmation),
                 new Mailer())
         {
         }
 
         public UsersController(
-            Func<string, string, string> signup,
+            Func<string, string, bool, string> signup,
             IMailer mailer)
         {
             this.signup = signup;
             this.mailer = mailer;
+        }
+
+        public virtual bool IsDebuggingEnabled
+        {
+            get
+            {
+                object context;
+
+                if (Request.Properties.TryGetValue("MS_HttpContext", out context))
+                {
+                    var httpContext = context as HttpContextBase;
+
+                    return (httpContext != null) && httpContext.IsDebuggingEnabled;
+                }
+
+                return false;
+            }
         }
 
         public async Task<HttpResponseMessage> Post(CreateUser model)
@@ -48,9 +66,11 @@
             var userName = model.Email.ToLowerInvariant();
             var token = string.Empty;
 
+            var requireConfirmation = !IsDebuggingEnabled;
+
             try
             {
-                token = signup(userName, model.Password);
+                token = signup(userName, model.Password, requireConfirmation);
             }
             catch (MembershipCreateUserException e)
             {
@@ -59,7 +79,11 @@
 
             if (statusCode == MembershipCreateStatus.Success)
             {
-                await mailer.UserConfirmationAsync(userName, token);
+                if (requireConfirmation)
+                {
+                    await mailer.UserConfirmationAsync(userName, token);
+                }
+
                 return Request.CreateResponse(HttpStatusCode.NoContent);
             }
 

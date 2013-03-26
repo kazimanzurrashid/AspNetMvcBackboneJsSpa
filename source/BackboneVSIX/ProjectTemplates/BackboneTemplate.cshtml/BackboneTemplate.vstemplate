@@ -121,7 +121,7 @@
         <Folder Name="ClientViews" TargetFolderName="ClientViews">
           <ProjectItem ReplaceParameters="true" TargetFileName="_ChangePassword.cshtml">_ChangePassword.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_ForgotPassword.cshtml">_ForgotPassword.cshtml</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="_NotFound.cshtml">_NotFound.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NotFound.cshtml">NotFound.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignIn.cshtml">_SignIn.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignOut.cshtml">_SignOut.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignUp.cshtml">_SignUp.cshtml</ProjectItem>

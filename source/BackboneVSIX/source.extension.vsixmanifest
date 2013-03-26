@@ -106,11 +106,11 @@
 
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ChangePassword.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ForgotPassword.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_NotFound.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignIn.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignOut.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignUp.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Membership.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\NotFound.cshtml" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Profile.cshtml" />
 
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\_ViewStart.cshtml" />
