@@ -44,9 +44,6 @@
         <ProjectItem ReplaceParameters="true" TargetFileName="SupportsController.cs">SupportsController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UsersController.cs">UsersController.cs</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
       <Folder Name="Helpers" TargetFolderName="Helpers">
         <ProjectItem ReplaceParameters="true" TargetFileName="ClientViewExtensions.cs">ClientViewExtensions.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UrlHelperExtensions.cs">UrlHelperExtensions.cs</ProjectItem>
@@ -121,11 +118,11 @@
         <Folder Name="ClientViews" TargetFolderName="ClientViews">
           <ProjectItem ReplaceParameters="true" TargetFileName="_ChangePassword.cshtml">_ChangePassword.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_ForgotPassword.cshtml">_ForgotPassword.cshtml</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="NotFound.cshtml">NotFound.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignIn.cshtml">_SignIn.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignOut.cshtml">_SignOut.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="_SignUp.cshtml">_SignUp.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="Membership.cshtml">Membership.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NotFound.cshtml">NotFound.cshtml</ProjectItem>
           <ProjectItem ReplaceParameters="true" TargetFileName="Profile.cshtml">Profile.cshtml</ProjectItem>
         </Folder>
         <Folder Name="Emails" TargetFolderName="Emails">

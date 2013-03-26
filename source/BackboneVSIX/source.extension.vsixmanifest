@@ -26,7 +26,7 @@
            ViewEngine="Razor"
            TemplateId="BackboneJSMvcSpaTemplate"
            Title="Backbone.js SPA Project"
-           Description="An ASP.NET MVC 4 project for building a single page application (SPA) with Backbone.js."
+           Description="An ASP.NET MVC 4 project for building single page application (SPA) with Backbone.js."
            Version="4.0"
     />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\BundleConfig.cs" />
