@@ -132,7 +132,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\MembershipConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PasswordsCotroller.cs" />
+    <Compile Include="Controllers\PasswordsController.cs" />
     <Compile Include="Controllers\SessionsController.cs" />
     <Compile Include="Controllers\SupportsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />

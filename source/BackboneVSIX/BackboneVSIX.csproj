@@ -70,7 +70,7 @@
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\HomeController.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsCotroller.cs">
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsController.cs">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SessionsController.cs">
