@@ -18,6 +18,8 @@
         private readonly Func<string, string, bool, string> signup;
         private readonly IMailer mailer;
 
+        private bool? debuggingEnabled;
+
         public UsersController()
             : this(
                 (userName, password, requireConfirmation) =>
@@ -37,20 +39,32 @@
             this.mailer = mailer;
         }
 
-        public virtual bool IsDebuggingEnabled
+        public bool IsDebuggingEnabled
         {
             get
             {
-                object context;
-
-                if (Request.Properties.TryGetValue("MS_HttpContext", out context))
+                if (debuggingEnabled == null)
                 {
-                    var httpContext = context as HttpContextBase;
+                    object context;
 
-                    return (httpContext != null) && httpContext.IsDebuggingEnabled;
+                    if (Request.Properties.TryGetValue("MS_HttpContext", out context))
+                    {
+                        var httpContext = context as HttpContextBase;
+
+                        debuggingEnabled = (httpContext != null) && httpContext.IsDebuggingEnabled;
+                    }
+                    else
+                    {
+                        debuggingEnabled = false;
+                    }
                 }
 
-                return false;
+                return debuggingEnabled.GetValueOrDefault();
+            }
+
+            set
+            {
+                debuggingEnabled = value;
             }
         }
 

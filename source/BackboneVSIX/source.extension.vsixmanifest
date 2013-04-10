@@ -39,7 +39,7 @@
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Content\application.css" />
 
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\HomeController.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsCotroller.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsController.cs" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SessionsController.cs" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SupportsController.cs" />
     <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\UsersController.cs" />

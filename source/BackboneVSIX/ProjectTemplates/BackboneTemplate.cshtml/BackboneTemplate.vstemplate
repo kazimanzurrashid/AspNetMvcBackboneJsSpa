@@ -39,7 +39,7 @@
       </Folder>
       <Folder Name="Controllers" TargetFolderName="Controllers">
         <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="PasswordsCotroller.cs">PasswordsCotroller.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PasswordsController.cs">PasswordsController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SessionsController.cs">SessionsController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="SupportsController.cs">SupportsController.cs</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="UsersController.cs">UsersController.cs</ProjectItem>

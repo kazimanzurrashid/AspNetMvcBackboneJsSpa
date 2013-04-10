@@ -31,6 +31,9 @@ module Application {
 
         activate(view: Backbone.View, menu?: string) {
             if (this.currentView) {
+                if (this.currentView == <Views.IActivable><any>view) {
+                    return;
+                }
                 this.currentView.deactivate();
             }
 

@@ -23,6 +23,9 @@ var Application;
         };
         Router.prototype.activate = function (view, menu) {
             if(this.currentView) {
+                if(this.currentView == view) {
+                    return;
+                }
                 this.currentView.deactivate();
             }
             if(menu) {
