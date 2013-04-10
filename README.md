@@ -223,8 +223,5 @@ The SPA Template uses the awesome [Postal](http://aboutcode.net/postal) to send 
 
 - Create few t4+ps scripts that auto generates the Backbone Model and View from the server side model.
 
-## Download
-[BackboneSpa.vsix](http://dl.dropbox.com/u/15068340/BackboneSpa.vsix)
-
 ## License
 Backbone.js SPA Template is released under the [MIT License](http://www.opensource.org/licenses/MIT).
