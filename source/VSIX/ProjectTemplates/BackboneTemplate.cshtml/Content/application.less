@@ -1,0 +1,67 @@
+@import 'less/variables';
+@import 'less/mixins';
+@import 'less/reset';
+@import 'less/scaffolding';
+@import 'less/grid';
+@import 'less/layouts';
+@import 'less/type';
+@import 'less/code';
+@import 'less/forms';
+@import 'less/tables';
+@import 'less/font-awesome';
+@import 'less/dropdowns';
+@import 'less/wells';
+@import 'less/component-animations';
+@import 'less/close';
+@import 'less/buttons';
+@import 'less/button-groups';
+@import 'less/alerts';
+@import 'less/navs';
+@import 'less/navbar';
+@import 'less/breadcrumbs';
+@import 'less/pagination';
+@import 'less/pager';
+@import 'less/modals';
+@import 'less/tooltip';
+@import 'less/popovers';
+@import 'less/thumbnails';
+@import 'less/media';
+@import 'less/labels-badges';
+@import 'less/progress-bars';
+@import 'less/accordion';
+@import 'less/carousel';
+@import 'less/hero-unit';
+@import 'less/utilities';
+
+.flash-bar {
+  margin-bottom: 0;
+}
+
+#container {
+  overflow: hidden;
+  min-height: 380px;
+  .page {
+    display: none;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.modal-section + .modal-section {
+  border-top: 1px solid @grayLighter;
+  margin-top: 9px;
+  padding-top: 15px;
+}
+
+footer[role="contentinfo"] {
+  .row, .row-fluid {
+    border-top: 1px solid @grayLighter;
+    margin-top: 1.5em;
+    padding-top: 1em;
+    p {
+      font-size: @baseFontSize * .85;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

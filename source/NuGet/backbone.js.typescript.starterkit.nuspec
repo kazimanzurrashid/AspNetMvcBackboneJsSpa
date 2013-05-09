@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>backbone.js.typescript.starterkit</id>
+    <version>1.0.0-alpha</version>
+    <title>Backbone.js TypeScript Starter Kit</title>
+    <authors>Kazi Manzur Rashid</authors>
+    <owners>Kazi Manzur Rashid</owners>
+    <projectUrl>https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa</projectUrl>
+    <iconUrl>https://raw.github.com/documentcloud/backbone/master/docs/images/backbone.png</iconUrl>
+    <description>Backbone.js TypeScript Starter Kit</description>
+    <tags>aspnetmvc backbone spa typescript starter</tags>
+    <dependencies>
+      <dependency id="Backbone.js" version="1.0.0" />
+      <dependency id="backbone.TypeScript.DefinitelyTyped" version="0.1.1" />
+      <dependency id="bootstrap.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <dependency id="chai-jquery.TypeScript.DefinitelyTyped" version="0.0.1" />
+      <dependency id="EntityFramework" version="5.0.0" />
+      <dependency id="FontAwesome.less" version="3.0.4" />
+      <dependency id="js-fixtures.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <dependency id="json2" version="1.0.2" />
+      <dependency id="Microsoft.AspNet.Mvc.FixedDisplayModes" version="1.0.1" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi" version="4.0.20710.0" />
+      <dependency id="Microsoft.AspNet.WebPages.WebData" version="2.0.20710.0" />
+      <dependency id="Microsoft.AspNet.Providers.Core" version="1.2" />
+      <dependency id="Microsoft.AspNet.Providers.LocalDB" version="1.1" /> 
+      <dependency id="mocha.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <dependency id="MochaChaiBdd" version="1.0.8" />
+      <dependency id="Modernizr" version="2.6.2" />
+      <dependency id="Newtonsoft.Json" version="5.0.5" />
+      <dependency id="postal" version="0.8.2" />
+      <dependency id="sinon.TypeScript.DefinitelyTyped" version="0.0.5" />
+      <dependency id="sinon-chai.TypeScript.DefinitelyTyped" version="0.0.1" />
+      <dependency id="underscore.TypeScript.DefinitelyTyped" version="0.0.8" />
+      <dependency id="WebActivator" version="1.5.3" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B884B999-DAFE-4FD7-AE79-D9E061095D26}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BackboneSpa</RootNamespace>
+    <AssemblyName>BackboneSpa</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+    <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
+    <IncludeDebugSymbolsInVSIXContainer>false</IncludeDebugSymbolsInVSIXContainer>
+    <IncludeDebugSymbolsInLocalVSIXDeployment>false</IncludeDebugSymbolsInLocalVSIXDeployment>
+    <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
+    <CopyOutputSymbolsToOutputDirectory>false</CopyOutputSymbolsToOutputDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ProjectTemplates\backbone.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\App_Start\FilterConfig.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\App_Start\RouteConfig.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\App_Start\WebApiConfig.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Global.asax">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Global.asax.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>Global.asax</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\HomeController.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsController.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SessionsController.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SupportsController.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Controllers\UsersController.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Helpers\ClientViewExtensions.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Helpers\UrlHelperExtensions.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessages.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessageType.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\Mailer.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\MailUrlResolver.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ChangePassword.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateSession.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateUser.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ForgotPassword.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ResetPassword.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\User.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\UsersContext.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummary.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Properties\AssemblyInfo.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.js">
+      <DependentUpon>application.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.js">
+      <DependentUpon>changepassword.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>forgotpassword.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>session.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>user.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>validation.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.js">
+      <DependentUpon>router.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.js">
+      <DependentUpon>activable.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.js">
+      <DependentUpon>helpers.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.js">
+      <DependentUpon>membership.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.js">
+      <DependentUpon>navigation.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.js">
+      <DependentUpon>notfound.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.js">
+      <DependentUpon>page.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.js">
+      <DependentUpon>profile.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\navigation.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\profile.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.js">
+      <DependentUpon>helpers.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Properties\AssemblyInfo.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\BackboneTemplate.csproj">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\BackboneTemplate.vstemplate">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Content\application.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>application.less</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\favicon.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.d.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>application.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>events.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.js">
+      <DependentUpon>confirm.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>flashbar.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>form.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>changepassword.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>forgotpassword.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>session.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>user.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>validation.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>router.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>activable.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.js">
+      <DependentUpon>helpers.ts</DependentUpon>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>membership.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>navigation.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>notfound.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>page.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>profile.ts</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.ts">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Scripts\_config.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\__TemplateIcon.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="__VsixIcon.ico">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Content\application.less">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Web.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Web.Debug.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Web.Release.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Web.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\_ViewStart.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Supports\ResetPassword.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Membership.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Profile.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ChangePassword.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ForgotPassword.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\NotFound.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignIn.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignOut.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignUp.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Html.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>ForgotPassword.cshtml</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Text.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>ForgotPassword.cshtml</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Html.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>UserConfirmation.cshtml</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Text.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <DependentUpon>UserConfirmation.cshtml</DependentUpon>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\_ViewStart.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Index.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Navigation.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Mocha\Index.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Error.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Flashbar.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Footer.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Head.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\LegacyIE.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Scripts.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\ValidationSummary.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\_Layout.cshtml">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\Backbone.js.1.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\FontAwesome.less.3.0.4.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\json2.1.0.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\postal.0.8.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\underscore.TypeScript.DefinitelyTyped.0.0.8.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\RazorEngine.3.2.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\jQuery.1.9.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\Twitter.Bootstrap.Less.2.3.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\underscore.js.1.4.4.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\bootstrap.TypeScript.DefinitelyTyped.0.0.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\backbone.TypeScript.DefinitelyTyped.0.1.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\chai-jquery.TypeScript.DefinitelyTyped.0.0.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\chai.TypeScript.DefinitelyTyped.0.0.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\jquery.TypeScript.DefinitelyTyped.0.1.2.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\js-fixtures.TypeScript.DefinitelyTyped.0.0.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\MochaChaiBdd.1.0.9.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\Newtonsoft.Json.5.0.5.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\sinon-chai.TypeScript.DefinitelyTyped.0.0.1.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\sinon.TypeScript.DefinitelyTyped.0.0.5.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\WebActivator.1.5.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\mocha.TypeScript.DefinitelyTyped.0.0.3.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="source.extension.vsixmanifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProjectTemplates\BackboneTemplate.cshtml\App_Start\StarterKitConfig.cs">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

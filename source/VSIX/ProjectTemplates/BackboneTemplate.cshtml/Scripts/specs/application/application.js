@@ -1,0 +1,127 @@
+var expect = this.chai.expect;
+describe('Application', function () {
+    describe('.start', function () {
+        var stubbedMembershipView;
+        var stubbedProfileView;
+        var spiedEventsTrigger;
+        var stubbedRouter;
+        before(function () {
+            stubbedMembershipView = sinon.stub(Application.Views, 'Membership', function () {
+                return {
+                };
+            });
+            stubbedProfileView = sinon.stub(Application.Views, 'Profile', function () {
+                return {
+                };
+            });
+            spiedEventsTrigger = sinon.spy(Application.events, 'on');
+            stubbedRouter = sinon.stub(Application, 'Router', function () {
+                return {
+                    navigate: function () {
+                    }
+                };
+            });
+            try  {
+                Application.start();
+            } catch (e) {
+            }
+        });
+        describe('view creation', function () {
+            it('creates membership view', function () {
+                expect(Application.membershipView).to.exist;
+            });
+            it('creates profile view', function () {
+                expect(Application.profileView).to.exist;
+            });
+        });
+        describe('application events', function () {
+            describe('subscription', function () {
+                it('subscribe to myAccount application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('myAccount');
+                });
+                it('subscribe to signedIn application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('signedIn');
+                });
+                it('subscribe to passwordResetRequested application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('passwordResetRequested');
+                });
+                it('subscribe to signedUp application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('signedUp');
+                });
+                it('subscribe to passwordChanged application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('passwordChanged');
+                });
+                it('subscribe to signedOut application event', function () {
+                    expect(spiedEventsTrigger).to.have.been.calledWith('signedOut');
+                });
+            });
+            describe('handling', function () {
+                var stubbedShowInfoBar;
+                var stubbedDelay;
+                before(function () {
+                    stubbedShowInfoBar = sinon.stub($, 'showInfobar', function () {
+                    });
+                    stubbedDelay = sinon.stub(_, 'delay');
+                });
+                describe('myAccount', function () {
+                    var spiedEventsTrigger;
+                    before(function () {
+                        return spiedEventsTrigger = sinon.spy(Application.events, 'trigger');
+                    });
+                    describe('user signed in', function () {
+                        before(function () {
+                            Application.userSignnedIn = true;
+                            Application.events.trigger('myAccount');
+                        });
+                        it('triggers showProfile', function () {
+                            expect(spiedEventsTrigger).to.have.been.calledWith('showProfile');
+                        });
+                    });
+                    describe('user not signed in', function () {
+                        before(function () {
+                            Application.userSignnedIn = false;
+                            Application.events.trigger('myAccount');
+                        });
+                        it('triggers showMembership', function () {
+                            expect(spiedEventsTrigger).to.have.been.calledWith('showMembership');
+                        });
+                    });
+                    after(function () {
+                        Application.userSignnedIn = false;
+                        spiedEventsTrigger.restore();
+                    });
+                });
+                describe('signedIn', function () {
+                    before(function () {
+                        Application.userSignnedIn = false;
+                        Application.events.trigger('signedIn');
+                        stubbedDelay.callArg(0);
+                    });
+                    it('sets #userSignnedIn to true', function () {
+                        expect(Application.userSignnedIn).to.be.true;
+                    });
+                    it('shows info bar', function () {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+                    after(function () {
+                        Application.userSignnedIn = false;
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+                after(function () {
+                    stubbedShowInfoBar.restore();
+                    stubbedDelay.restore();
+                });
+            });
+        });
+        it('creates router', function () {
+            expect(Application.router).to.exist;
+        });
+        after(function () {
+            stubbedMembershipView.restore();
+            stubbedProfileView.restore();
+            spiedEventsTrigger.restore();
+            stubbedRouter.restore();
+        });
+    });
+});

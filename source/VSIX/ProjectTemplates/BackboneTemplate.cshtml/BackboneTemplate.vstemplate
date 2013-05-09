@@ -1,0 +1,257 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>BackboneJsSpaTemplate</Name>
+    <Description>Backbone.js SPA Template for ASP.NET MVC 4</Description>
+    <Icon>__TemplateIcon.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Web</ProjectSubType>
+    <TemplateGroupID>Web</TemplateGroupID>
+    <TemplateID>KaziManzurRashid.WAP.Cshtml.BackboneSPA.v401</TemplateID>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>BackboneJsSpa</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+    <Hidden>true</Hidden>
+  </TemplateData>
+  <TemplateContent>
+    <CustomParameters>
+      <CustomParameter Name="$language$" Value="C#" />
+      <CustomParameter Name="$languageext$" Value="cs" />
+      <CustomParameter Name="$globalclassname$" Value="MvcApplication" />
+    </CustomParameters>
+    <Project TargetFileName="BackboneTemplate.csproj" File="BackboneTemplate.csproj" ReplaceParameters="true">
+      <Folder Name="App_Data" TargetFolderName="App_Data" />
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FilterConfig.cs">FilterConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RouteConfig.cs">RouteConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="StarterKitConfig.cs">StarterKitConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="WebApiConfig.cs">WebApiConfig.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem TargetFileName="application.less">application.less</ProjectItem>
+        <ProjectItem TargetFileName="application.css">application.css</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PasswordsController.cs">PasswordsController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SessionsController.cs">SessionsController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SupportsController.cs">SupportsController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsersController.cs">UsersController.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Helpers" TargetFolderName="Helpers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ClientViewExtensions.cs">ClientViewExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UrlHelperExtensions.cs">UrlHelperExtensions.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Infrastructure" TargetFolderName="Infrastructure">
+        <ProjectItem ReplaceParameters="true" TargetFileName="FlashMessages.cs">FlashMessages.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FlashMessageType.cs">FlashMessageType.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Mailer.cs">Mailer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MailUrlResolver.cs">MailUrlResolver.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ChangePassword.cs">ChangePassword.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CreateSession.cs">CreateSession.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CreateUser.cs">CreateUser.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ForgotPassword.cs">ForgotPassword.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ResetPassword.cs">ResetPassword.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="User.cs">User.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="UsersContext.cs">UsersContext.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ValidationSummary.cs">ValidationSummary.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <Folder Name="application" TargetFolderName="application">
+          <Folder Name="lib" TargetFolderName="lib">
+            <ProjectItem TargetFileName="confirm.ts">confirm.ts</ProjectItem>
+            <ProjectItem TargetFileName="confirm.js">confirm.js</ProjectItem>
+            <ProjectItem TargetFileName="flashbar.ts">flashbar.ts</ProjectItem>
+            <ProjectItem TargetFileName="flashbar.js">flashbar.js</ProjectItem>
+            <ProjectItem TargetFileName="form.ts">form.ts</ProjectItem>
+            <ProjectItem TargetFileName="form.js">form.js</ProjectItem>
+          </Folder>
+          <Folder Name="models" TargetFolderName="models">
+            <ProjectItem TargetFileName="changepassword.ts">changepassword.ts</ProjectItem>
+            <ProjectItem TargetFileName="changepassword.js">changepassword.js</ProjectItem>
+            <ProjectItem TargetFileName="forgotpassword.ts">forgotpassword.ts</ProjectItem>
+            <ProjectItem TargetFileName="forgotpassword.js">forgotpassword.js</ProjectItem>
+            <ProjectItem TargetFileName="session.ts">session.ts</ProjectItem>
+            <ProjectItem TargetFileName="session.js">session.js</ProjectItem>
+            <ProjectItem TargetFileName="user.ts">user.ts</ProjectItem>
+            <ProjectItem TargetFileName="user.js">user.js</ProjectItem>
+            <ProjectItem TargetFileName="validation.ts">validation.ts</ProjectItem>
+            <ProjectItem TargetFileName="validation.js">validation.js</ProjectItem>
+          </Folder>
+          <Folder Name="views" TargetFolderName="views">
+            <ProjectItem TargetFileName="activable.ts">activable.ts</ProjectItem>
+            <ProjectItem TargetFileName="activable.js">activable.js</ProjectItem>
+            <ProjectItem TargetFileName="helpers.ts">helpers.ts</ProjectItem>
+            <ProjectItem TargetFileName="helpers.js">helpers.js</ProjectItem>
+            <ProjectItem TargetFileName="membership.ts">membership.ts</ProjectItem>
+            <ProjectItem TargetFileName="membership.js">membership.js</ProjectItem>
+            <ProjectItem TargetFileName="navigation.ts">navigation.ts</ProjectItem>
+            <ProjectItem TargetFileName="navigation.js">navigation.js</ProjectItem>
+            <ProjectItem TargetFileName="notfound.ts">notfound.ts</ProjectItem>
+            <ProjectItem TargetFileName="notfound.js">notfound.js</ProjectItem>
+            <ProjectItem TargetFileName="page.ts">page.ts</ProjectItem>
+            <ProjectItem TargetFileName="page.js">page.js</ProjectItem>
+            <ProjectItem TargetFileName="profile.ts">profile.ts</ProjectItem>
+            <ProjectItem TargetFileName="profile.js">profile.js</ProjectItem>
+          </Folder>
+          <ProjectItem TargetFileName="application.d.ts">application.d.ts</ProjectItem>
+          <ProjectItem TargetFileName="application.ts">application.ts</ProjectItem>
+          <ProjectItem TargetFileName="application.js">application.js</ProjectItem>
+          <ProjectItem TargetFileName="events.ts">events.ts</ProjectItem>
+          <ProjectItem TargetFileName="events.js">events.js</ProjectItem>
+          <ProjectItem TargetFileName="router.ts">router.ts</ProjectItem>
+          <ProjectItem TargetFileName="router.js">router.js</ProjectItem>
+        </Folder>
+        <Folder Name="specs" TargetFolderName="specs">
+          <Folder Name="application" TargetFolderName="application">
+            <Folder Name="models" TargetFolderName="models">
+              <ProjectItem TargetFileName="changepassword.ts">changepassword.ts</ProjectItem>
+              <ProjectItem TargetFileName="changepassword.js">changepassword.js</ProjectItem>
+              <ProjectItem TargetFileName="forgotpassword.ts">forgotpassword.ts</ProjectItem>
+              <ProjectItem TargetFileName="forgotpassword.js">forgotpassword.js</ProjectItem>
+              <ProjectItem TargetFileName="session.ts">session.ts</ProjectItem>
+              <ProjectItem TargetFileName="session.js">session.js</ProjectItem>
+              <ProjectItem TargetFileName="user.ts">user.ts</ProjectItem>
+              <ProjectItem TargetFileName="user.js">user.js</ProjectItem>
+              <ProjectItem TargetFileName="validation.ts">validation.ts</ProjectItem>
+              <ProjectItem TargetFileName="validation.js">validation.js</ProjectItem>
+            </Folder>
+            <Folder Name="views" TargetFolderName="views">
+              <ProjectItem TargetFileName="activable.ts">activable.ts</ProjectItem>
+              <ProjectItem TargetFileName="activable.js">activable.js</ProjectItem>
+              <ProjectItem TargetFileName="helpers.ts">helpers.ts</ProjectItem>
+              <ProjectItem TargetFileName="helpers.js">helpers.js</ProjectItem>
+              <ProjectItem TargetFileName="membership.ts">membership.ts</ProjectItem>
+              <ProjectItem TargetFileName="membership.js">membership.js</ProjectItem>
+              <ProjectItem TargetFileName="navigation.ts">navigation.ts</ProjectItem>
+              <ProjectItem TargetFileName="navigation.js">navigation.js</ProjectItem>
+              <ProjectItem TargetFileName="notfound.ts">notfound.ts</ProjectItem>
+              <ProjectItem TargetFileName="notfound.js">notfound.js</ProjectItem>
+              <ProjectItem TargetFileName="page.ts">page.ts</ProjectItem>
+              <ProjectItem TargetFileName="page.js">page.js</ProjectItem>
+              <ProjectItem TargetFileName="profile.ts">profile.ts</ProjectItem>
+              <ProjectItem TargetFileName="profile.js">profile.js</ProjectItem>
+            </Folder>
+            <ProjectItem TargetFileName="application.ts">application.ts</ProjectItem>
+            <ProjectItem TargetFileName="application.js">application.js</ProjectItem>
+            <ProjectItem TargetFileName="router.ts">router.ts</ProjectItem>
+            <ProjectItem TargetFileName="router.js">router.js</ProjectItem>
+          </Folder>
+          <Folder Name="fixtures" TargetFolderName="fixtures">
+            <ProjectItem TargetFileName="navigation.html">navigation.html</ProjectItem>
+            <ProjectItem TargetFileName="profile.html">profile.html</ProjectItem>
+          </Folder>
+          <ProjectItem TargetFileName="helpers.ts">helpers.ts</ProjectItem>
+          <ProjectItem TargetFileName="helpers.js">helpers.js</ProjectItem>
+        </Folder>
+        <ProjectItem TargetFileName="_config.js">_config.js</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <Folder Name="ClientViews" TargetFolderName="ClientViews">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_ChangePassword.cshtml">_ChangePassword.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_ForgotPassword.cshtml">_ForgotPassword.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_SignIn.cshtml">_SignIn.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_SignOut.cshtml">_SignOut.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_SignUp.cshtml">_SignUp.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Membership.cshtml">Membership.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="NotFound.cshtml">NotFound.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Profile.cshtml">Profile.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Emails" TargetFolderName="Emails">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_ViewStart.cshtml">_ViewStart.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ForgotPassword.cshtml">ForgotPassword.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ForgotPassword.Html.cshtml">ForgotPassword.Html.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ForgotPassword.Text.cshtml">ForgotPassword.Text.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserConfirmation.cshtml">UserConfirmation.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserConfirmation.Html.cshtml">UserConfirmation.Html.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="UserConfirmation.Text.cshtml">UserConfirmation.Text.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Navigation.cshtml">Navigation.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Mocha" TargetFolderName="Mocha">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Layout.cshtml">_Layout.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.cshtml">Error.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Flashbar.cshtml">Flashbar.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Footer.cshtml">Footer.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Head.cshtml">Head.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LegacyIE.cshtml">LegacyIE.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Scripts.cshtml">Scripts.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ValidationSummary.cshtml">ValidationSummary.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Supports" TargetFolderName="Supports">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ResetPassword.cshtml">ResetPassword.cshtml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_ViewStart.cshtml">_ViewStart.cshtml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      </Folder>
+      <ProjectItem>favicon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="registry" keyName="AspNetMvc4VS11" >
+      <package id="EntityFramework" version="5.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.Mvc" version="4.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.Razor" version="2.0.20715.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.Web.Optimization" version="1.0.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi" version="4.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Client" version="4.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.Core" version="4.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebApi.WebHost" version="4.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebPages" version="2.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebPages.Data" version="2.0.20710.0"  skipAssemblyReferences="true" />
+      <package id="Microsoft.AspNet.WebPages.WebData" version="2.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.Net.Http" version="2.0.20710.0" skipAssemblyReferences="true" />
+      <package id="Microsoft.Web.Infrastructure" version="1.0.0.0" skipAssemblyReferences="true" />
+      <package id="Modernizr" version="2.6.2" />
+      <package id="WebGrease" version="1.3.0" skipAssemblyReferences="true" />
+    </packages>
+    <packages repository="extension" repositoryId="BackboneJS..f99e35a4-46a9-4182-bd1a-f7df044f5830" >
+      <package id="Backbone.js" version="1.0.0" />
+      <package id="backbone.TypeScript.DefinitelyTyped" version="0.1.1" />
+      <package id="bootstrap.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <package id="chai-jquery.TypeScript.DefinitelyTyped" version="0.0.1" />
+      <package id="chai.TypeScript.DefinitelyTyped" version="0.0.2" />
+      <package id="FontAwesome.less" version="3.0.4" />
+      <package id="jQuery" version="1.9.1" />
+      <package id="jquery.TypeScript.DefinitelyTyped" version="0.1.2" />
+      <package id="js-fixtures.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <package id="json2" version="1.0.2" />
+      <package id="Microsoft.AspNet.Mvc.FixedDisplayModes" version="1.0.1" skipAssemblyReferences="true" />
+      <package id="mocha.TypeScript.DefinitelyTyped" version="0.0.3" />
+      <package id="MochaChaiBdd" version="1.0.9" />
+      <package id="Newtonsoft.Json" version="5.0.5" skipAssemblyReferences="true" />
+      <package id="postal" version="0.8.2" skipAssemblyReferences="true" />
+      <package id="RazorEngine" version="3.2.0" skipAssemblyReferences="true" />
+      <package id="sinon-chai.TypeScript.DefinitelyTyped" version="0.0.1" />
+      <package id="sinon.TypeScript.DefinitelyTyped" version="0.0.5" />
+      <package id="Twitter.Bootstrap.Less" version="2.3.1" />
+      <package id="underscore.js" version="1.4.4" />
+      <package id="underscore.TypeScript.DefinitelyTyped" version="0.0.8" />
+      <package id="WebActivator" version="1.5.3" skipAssemblyReferences="true" />
+    </packages>
+  </WizardData>
+</VSTemplate>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneVSIX", "BackboneVSIX\BackboneVSIX.csproj", "{B884B999-DAFE-4FD7-AE79-D9E061095D26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIX", "VSIX\VSIX.csproj", "{B884B999-DAFE-4FD7-AE79-D9E061095D26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackboneTemplate", "BackboneTemplate\BackboneTemplate.csproj", "{97997161-BDBA-4A94-9E1C-05AA9EE9414C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{97997161-BDBA-4A94-9E1C-05AA9EE9414C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FF33C328-5B83-47C8-992B-0BBE02133FB6}"
 	ProjectSection(SolutionItems) = preProject
