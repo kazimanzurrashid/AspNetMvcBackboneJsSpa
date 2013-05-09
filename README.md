@@ -8,6 +8,10 @@ Backbone.js application in ASP.NET MVC. Out of the box it provides User
 Sign-up, Sign-in, Password reset, User confirmation etc. with basic email
 templates.
 
+## Download
+- [NuGet Package](https://nuget.org/packages/backbone.js.typescript.starterkit/)
+- [VSIX Extension](http://www.asp.net/single-page-application/overview/templates/backbonejs-template)
+
 ## Features
 - ASP.NET MVC
 - ASP.NET Web API
@@ -17,6 +21,10 @@ templates.
 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 - [Postal](http://aboutcode.net/postal)
+- Client Side Test
+  - [Mocha](http://visionmedia.github.io/mocha/)
+  - [Chai](http://chaijs.com/)
+  - [Sinon](http://sinonjs.org/)
 
 ## Screenshots
 
@@ -216,8 +224,6 @@ The SPA Template uses the awesome [Postal](http://aboutcode.net/postal) to send 
 
 ## Road map
 - Integrate any of the popular Backbone validation extension that automatically sets the validation rules for Backbone Model from the server side DataAnnotations attributes.
-
-- Use require.js.
 
 - CoffeeScript version.
 
