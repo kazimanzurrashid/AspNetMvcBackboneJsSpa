@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>backbone.js.coffeescript.starterkit</id>
-    <version>1.0.0-beta3</version>
+    <version>1.0.0-rc</version>
     <title>Backbone.js CoffeeScript Starter Kit</title>
     <authors>Kazi Manzur Rashid</authors>
     <owners>Kazi Manzur Rashid</owners>
@@ -23,7 +23,6 @@
       <dependency id="Modernizr" version="2.6.2" />
       <dependency id="Newtonsoft.Json" version="5.0.5" />
       <dependency id="postal" version="0.8.2" />
-      <dependency id="underscore.TypeScript.DefinitelyTyped" version="0.0.8" />
       <dependency id="WebActivator" version="1.5.3" />
     </dependencies>
   </metadata>

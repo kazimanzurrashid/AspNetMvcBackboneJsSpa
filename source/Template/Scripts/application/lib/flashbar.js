@@ -27,7 +27,6 @@
             return flashbar.remove();
         }, timeout);
     }
-    ; ;
     $.showSuccessbar = function (message) {
         showFlashbar('success', message);
     };

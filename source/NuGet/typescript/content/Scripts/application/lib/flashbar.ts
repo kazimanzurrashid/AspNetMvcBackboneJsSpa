@@ -31,7 +31,7 @@ interface JQueryStatic {
         } else if (type === 'info') {
             icon = 'icon-info-sign';
         } else {
-            throw new Error('Unknown type.')
+            throw new Error('Unknown type.');
         }
 
         var flashbar = $(template({
@@ -44,7 +44,7 @@ interface JQueryStatic {
             .slideDown(animationDuration);
 
         _.delay(() => flashbar.remove(), timeout);
-    };
+    }
 
     $.showSuccessbar = function (message: string) {
         showFlashbar('success', message);

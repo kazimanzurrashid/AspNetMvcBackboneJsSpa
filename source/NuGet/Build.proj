@@ -8,7 +8,7 @@
     <coffeescriptPath>$(MSBuildProjectDirectory)\coffeescript</coffeescriptPath>
     <NuGet>$(MSBuildProjectDirectory)\..\.nuget\NuGet.exe</NuGet>
   </PropertyGroup>
-  <Target Name="Full" DependsOnTargets="Init;CreateTypeScript;CreateTypeScript;Cleanup"/>
+  <Target Name="Full" DependsOnTargets="Init;CreateTypeScript;CreateCoffeeScript;Cleanup"/>
   <Target Name="Init">
     <MakeDir Directories="$(dropPath)" Condition="!Exists('$(dropPath)')"/>
     <MakeDir Directories="$(tempPath)" Condition="!Exists('$(tempPath)')"/>
@@ -16,15 +16,15 @@
   <Target Name="CreateTypeScript" DependsOnTargets="Init">
     <ItemGroup>
       <sharedFiles Include="$(sharedPath)\**\*.*"/>
-      <sourceFiles Include="$(typescriptPath)\**\*.*"/>
+      <tsSourceFiles Include="$(typescriptPath)\**\*.*"/>
     </ItemGroup>
     <Copy
       SourceFiles="@(sharedFiles)"
       DestinationFiles="@(sharedFiles->'$(tempPath)\ts\%(RecursiveDir)%(Filename)%(Extension)')"
     /> 
     <Copy
-      SourceFiles="@(sourceFiles)"
-      DestinationFiles="@(sourceFiles->'$(tempPath)\ts\%(RecursiveDir)%(Filename)%(Extension)')"
+      SourceFiles="@(tsSourceFiles)"
+      DestinationFiles="@(tsSourceFiles->'$(tempPath)\ts\%(RecursiveDir)%(Filename)%(Extension)')"
     />
     <Exec
       Command="&quot;$(NuGet)&quot; pack &quot;$(tempPath)\ts\backbone.js.typescript.starterkit.nuspec&quot;"
@@ -35,15 +35,15 @@
   <Target Name="CreateCoffeeScript" DependsOnTargets="Init">
     <ItemGroup>
       <sharedFiles Include="$(sharedPath)\**\*.*"/>
-      <sourceFiles Include="$(coffeescriptPath)\**\*.*"/>
+      <csSourceFiles Include="$(coffeescriptPath)\**\*.*"/>
     </ItemGroup>
     <Copy
       SourceFiles="@(sharedFiles)"
       DestinationFiles="@(sharedFiles->'$(tempPath)\cs\%(RecursiveDir)%(Filename)%(Extension)')"
     /> 
     <Copy
-      SourceFiles="@(sourceFiles)"
-      DestinationFiles="@(sourceFiles->'$(tempPath)\cs\%(RecursiveDir)%(Filename)%(Extension)')"
+      SourceFiles="@(csSourceFiles)"
+      DestinationFiles="@(csSourceFiles->'$(tempPath)\cs\%(RecursiveDir)%(Filename)%(Extension)')"
     />
     <Exec
       Command="&quot;$(NuGet)&quot; pack &quot;$(tempPath)\cs\backbone.js.coffeescript.starterkit.nuspec&quot;"
