@@ -21,7 +21,7 @@ describe('Views.MembershipChildForm', function () {
             };
             stubbedModel = sinon.stub(Backbone, 'Model').returns(model);
             view.modelType = Backbone.Model;
-            stubbedSubscribeModelInvalidEvent = sinon.stub(Application.Views, 'subscribeModelInvalidEvent', function () {
+            stubbedSubscribeModelInvalidEvent = sinon.stub(Application.Views.Helpers, 'subscribeModelInvalidEvent', function () {
             });
             stubbedHideSummaryError = sinon.stub(view.$el, 'hideSummaryError', function () {
                 return view.$el;
@@ -30,7 +30,8 @@ describe('Views.MembershipChildForm', function () {
                 return view.$el;
             });
             stubbedSerializeFields = sinon.stub(view.$el, 'serializeFields', function () {
-                return view.$el;
+                return {
+                };
             });
         });
         describe('form submit', function () {
@@ -98,6 +99,9 @@ describe('Views.MembershipChildForm', function () {
                         preventDefault: function () {
                         }
                     });
+                });
+                it('handles ajax error', function () {
+                    expect(stubbedHandleError).to.have.been.called;
                 });
                 after(function () {
                     stubbedSave.restore();

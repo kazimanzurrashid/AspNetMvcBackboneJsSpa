@@ -48,7 +48,7 @@ module Application {
         }
 
         initialize() {
-            this.navigationView = new Views.Navigation;
+            this.navigationView = new Views.Navigation();
 
             var pageTemplate = _.template($('#page-template').html());
 
@@ -76,7 +76,7 @@ module Application {
                         '<a href="https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa">Project Page</a> ' +
                         'or follow me <a href="https://twitter.com/manzurrashid">@manzurrashid</a>.</p>'
                 })
-            }).render();
+            });
 
             this.aboutView = new Views.Page({
                 className: 'page',
@@ -85,11 +85,11 @@ module Application {
                     title: 'About',
                     content: 'Tell us about your app.'
                 })
-            }).render();
+            });
 
-            $('#container').prepend(this.homeView.$el, this.aboutView.$el);
+            $('#container').prepend(this.homeView.render().$el, this.aboutView.render().$el);
 
-            this.notFoundView = new Views.NotFound;
+            this.notFoundView = new Views.NotFound();
         }
     }
 

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Full" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <dropPath>$(MSBuildProjectDirectory)\_drops</dropPath>
+    <tempPath>$(MSBuildProjectDirectory)\_temp</tempPath>
+    <sharedPath>$(MSBuildProjectDirectory)\_shared</sharedPath>
+    <typescriptPath>$(MSBuildProjectDirectory)\typescript</typescriptPath>
+    <coffeescriptPath>$(MSBuildProjectDirectory)\coffeescript</coffeescriptPath>
+    <NuGet>$(MSBuildProjectDirectory)\..\.nuget\NuGet.exe</NuGet>
+  </PropertyGroup>
+  <Target Name="Full" DependsOnTargets="Init;CreateTypeScript;CreateTypeScript;Cleanup"/>
+  <Target Name="Init">
+    <MakeDir Directories="$(dropPath)" Condition="!Exists('$(dropPath)')"/>
+    <MakeDir Directories="$(tempPath)" Condition="!Exists('$(tempPath)')"/>
+  </Target>
+  <Target Name="CreateTypeScript" DependsOnTargets="Init">
+    <ItemGroup>
+      <sharedFiles Include="$(sharedPath)\**\*.*"/>
+      <sourceFiles Include="$(typescriptPath)\**\*.*"/>
+    </ItemGroup>
+    <Copy
+      SourceFiles="@(sharedFiles)"
+      DestinationFiles="@(sharedFiles->'$(tempPath)\ts\%(RecursiveDir)%(Filename)%(Extension)')"
+    /> 
+    <Copy
+      SourceFiles="@(sourceFiles)"
+      DestinationFiles="@(sourceFiles->'$(tempPath)\ts\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Exec
+      Command="&quot;$(NuGet)&quot; pack &quot;$(tempPath)\ts\backbone.js.typescript.starterkit.nuspec&quot;"
+      WorkingDirectory="$(dropPath)"
+    />
+    <RemoveDir Directories="$(tempPath)\ts"/>
+  </Target>
+  <Target Name="CreateCoffeeScript" DependsOnTargets="Init">
+    <ItemGroup>
+      <sharedFiles Include="$(sharedPath)\**\*.*"/>
+      <sourceFiles Include="$(coffeescriptPath)\**\*.*"/>
+    </ItemGroup>
+    <Copy
+      SourceFiles="@(sharedFiles)"
+      DestinationFiles="@(sharedFiles->'$(tempPath)\cs\%(RecursiveDir)%(Filename)%(Extension)')"
+    /> 
+    <Copy
+      SourceFiles="@(sourceFiles)"
+      DestinationFiles="@(sourceFiles->'$(tempPath)\cs\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Exec
+      Command="&quot;$(NuGet)&quot; pack &quot;$(tempPath)\cs\backbone.js.coffeescript.starterkit.nuspec&quot;"
+      WorkingDirectory="$(dropPath)"
+    />
+    <RemoveDir Directories="$(tempPath)\cs"/>
+  </Target>
+  <Target Name="Cleanup">
+    <RemoveDir Directories="$(tempPath)" Condition="Exists('$(tempPath)')"/>
+  </Target>
+</Project>

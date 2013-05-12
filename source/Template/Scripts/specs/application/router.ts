@@ -44,7 +44,7 @@ describe('Router', () => {
         router = new Application.Router;
     });
 
-    describe('#new', () => {
+    describe('new', () => {
         it('creates navigation view', () => {
             expect(router.navigationView).to.exist;
         });
@@ -62,7 +62,7 @@ describe('Router', () => {
         });
     });
 
-    describe('navigation methods', () => {
+    describe('navigation', () => {
         var stubbedActivate: SinonStub;
 
         before(() => {

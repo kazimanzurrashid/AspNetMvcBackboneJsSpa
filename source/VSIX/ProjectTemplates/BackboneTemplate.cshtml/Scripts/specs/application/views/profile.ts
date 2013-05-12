@@ -18,7 +18,10 @@ describe('Views.Profile', () => {
     before(() => {
         fixtures.load('/profile.html');
 
-        spiedListenTo = sinon.spy(Application.Views.Profile.prototype, 'listenTo');
+        spiedListenTo = sinon.spy(
+            Application.Views.Profile.prototype,
+            'listenTo');
+
         view = new Application.Views.Profile({
             el: $(fixtures.window().document.body).find('#profile-dialog')
         });
@@ -30,7 +33,11 @@ describe('Views.Profile', () => {
         });
 
         it('subscribes to showProfile application event', () => {
-            expect(spiedListenTo).to.have.been.calledWith(Application.events, 'showProfile', view.onShowProfile);
+            expect(spiedListenTo)
+                .to.have.been.calledWith(
+                    Application.events,
+                    'showProfile',
+                    view.onShowProfile);
         });
     });
 
@@ -41,21 +48,44 @@ describe('Views.Profile', () => {
         var stubbedModal: SinonStub;
 
         before(() => {
-            stubbedResetFields = sinon.stub(view.changePasswordForm, 'resetFields', () => view.changePasswordForm);
-            stubbedHideSummaryError = sinon.stub(view.changePasswordForm, 'hideSummaryError', () => view.changePasswordForm);
-            stubbedHideFieldErrors = sinon.stub(view.changePasswordForm, 'hideFieldErrors', () => view.changePasswordForm);
-            stubbedModal = sinon.stub(view.$el, 'modal', () => { });
+            stubbedResetFields = sinon.stub(
+                view.changePasswordForm,
+                'resetFields',
+                () => view.changePasswordForm);
+
+            stubbedHideSummaryError = sinon.stub(
+                view.changePasswordForm,
+                'hideSummaryError',
+                () => view.changePasswordForm);
+
+            stubbedHideFieldErrors = sinon.stub(
+                view.changePasswordForm,
+                'hideFieldErrors',
+                () => view.changePasswordForm);
+
+            stubbedModal = sinon.stub(
+                view.$el,
+                'modal',
+                () => { });
 
             view.onShowProfile()
         });
 
-        it('resets forms fields', () => expect(stubbedResetFields).to.have.been.calledOnce);
+        it('resets forms fields', () => {
+            expect(stubbedResetFields).to.have.been.calledOnce;
+        })
 
-        it('hides form summary errors', () => expect(stubbedHideSummaryError).to.have.been.calledOnce);
+        it('hides form summary errors', () => {
+            expect(stubbedHideSummaryError).to.have.been.calledOnce;
+        });
 
-        it('hides form fields errors', () => expect(stubbedHideFieldErrors).to.have.been.calledOnce);
+        it('hides form fields errors', () => {
+            expect(stubbedHideFieldErrors).to.have.been.calledOnce;
+        });
 
-        it('shows modal dialog', () =>  expect(stubbedModal).to.have.been.calledWith('show'));
+        it('shows modal dialog', () => {
+            expect(stubbedModal).to.have.been.calledWith('show');
+        });
 
         after(() => {
             stubbedResetFields.restore();
@@ -89,10 +119,25 @@ describe('Views.Profile', () => {
         var model;
 
         before(() => {
-            stubbedHideSummaryError = sinon.stub(view.changePasswordForm, 'hideSummaryError', () => view.changePasswordForm);
-            stubbedHideFieldErrors = sinon.stub(view.changePasswordForm, 'hideFieldErrors', () => view.changePasswordForm);
-            stubbedSubscribeModelInvalidEvent = sinon.stub(Application.Views, 'subscribeModelInvalidEvent', () => { });
-            stubbedSerializeFields = sinon.stub(view.changePasswordForm, 'serializeFields', () => { });
+            stubbedHideSummaryError = sinon.stub(
+                view.changePasswordForm,
+                'hideSummaryError',
+                () => view.changePasswordForm);
+
+            stubbedHideFieldErrors = sinon.stub(
+                view.changePasswordForm,
+                'hideFieldErrors',
+                () => view.changePasswordForm);
+
+            stubbedSubscribeModelInvalidEvent = sinon.stub(
+                Application.Views.Helpers,
+                'subscribeModelInvalidEvent',
+                () => { });
+
+            stubbedSerializeFields = sinon.stub(
+                view.changePasswordForm,
+                'serializeFields',
+                () => { return {} });
 
             model = {
                 once: () => { },
@@ -176,8 +221,8 @@ describe('Views.Profile', () => {
                     var stubbedSave: SinonStub;
 
                     before(() => {
-                        stubbedHasModelErrors = sinon.stub(Application.Views, 'hasModelErrors', () => true);
-                        stubbedGetModelErrors = sinon.stub(Application.Views, 'getModelErrors', () => { return {} });
+                        stubbedHasModelErrors = sinon.stub(Application.Views.Helpers, 'hasModelErrors', () => true);
+                        stubbedGetModelErrors = sinon.stub(Application.Views.Helpers, 'getModelErrors', () => { return {} });
                         stubbedShowFieldErrors = sinon.stub(view.changePasswordForm, 'showFieldErrors', () => { });
                         stubbedSave = sinon.stub(model, 'save').yieldsTo('error');
 
@@ -202,7 +247,7 @@ describe('Views.Profile', () => {
                     var stubbedSave: SinonStub;
 
                     before(() => {
-                        stubbedHasModelErrors = sinon.stub(Application.Views, 'hasModelErrors', () => false);
+                        stubbedHasModelErrors = sinon.stub(Application.Views.Helpers, 'hasModelErrors', () => false);
                         stubbedShowSummaryError = sinon.stub(view.changePasswordForm, 'showSummaryError', () => { });
                         stubbedSave = sinon.stub(model, 'save').yieldsTo('error');
 

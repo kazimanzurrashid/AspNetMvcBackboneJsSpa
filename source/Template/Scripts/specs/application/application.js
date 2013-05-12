@@ -62,6 +62,7 @@ describe('Application', function () {
                     stubbedShowInfoBar = sinon.stub($, 'showInfobar', function () {
                     });
                     stubbedDelay = sinon.stub(_, 'delay');
+                    stubbedDelay.withArgs(sinon.match.func, sinon.match.number);
                 });
                 describe('myAccount', function () {
                     var spiedEventsTrigger;
@@ -99,6 +100,59 @@ describe('Application', function () {
                     });
                     it('sets #userSignnedIn to true', function () {
                         expect(Application.userSignnedIn).to.be.true;
+                    });
+                    it('shows info bar', function () {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+                    after(function () {
+                        Application.userSignnedIn = false;
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+                describe('passwordResetRequested', function () {
+                    before(function () {
+                        Application.events.trigger('passwordResetRequested');
+                        stubbedDelay.callArg(0);
+                    });
+                    it('shows info bar', function () {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+                    after(function () {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+                describe('signedUp', function () {
+                    before(function () {
+                        Application.events.trigger('signedUp');
+                        stubbedDelay.callArg(0);
+                    });
+                    it('shows info bar', function () {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+                    after(function () {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+                describe('passwordChanged', function () {
+                    before(function () {
+                        Application.events.trigger('passwordChanged');
+                        stubbedDelay.callArg(0);
+                    });
+                    it('shows info bar', function () {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+                    after(function () {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+                describe('signedOut', function () {
+                    before(function () {
+                        Application.userSignnedIn = true;
+                        Application.events.trigger('signedOut');
+                        stubbedDelay.callArg(0);
+                    });
+                    it('sets #userSignnedIn to false', function () {
+                        expect(Application.userSignnedIn).to.be.false;
                     });
                     it('shows info bar', function () {
                         expect(stubbedShowInfoBar).to.have.been.called;

@@ -29,7 +29,7 @@ describe('Models.User', function () {
                     confirmPassword: '$ecre8'
                 });
             });
-            it('everything correct', function () {
+            it('is ok', function () {
                 expect(user.isValid()).to.be.ok;
             });
         });

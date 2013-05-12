@@ -19,7 +19,7 @@ describe('Views.MembershipChildForm', () => {
         fixtures.set('<form id="form"></form>');
 
         view = new Application.Views.MembershipChildForm({
-            el: $(fixtures.window().document.body).find('#form'),
+            el: $(fixtures.window().document.body).find('#form')
         });
     });
 
@@ -39,7 +39,7 @@ describe('Views.MembershipChildForm', () => {
             view.modelType = Backbone.Model;
 
             stubbedSubscribeModelInvalidEvent = sinon.stub(
-                Application.Views,
+                Application.Views.Helpers,
                 'subscribeModelInvalidEvent',
                 () => { });
 
@@ -56,7 +56,7 @@ describe('Views.MembershipChildForm', () => {
             stubbedSerializeFields = sinon.stub(
                 view.$el,
                 'serializeFields',
-                () => view.$el);
+                () => { return {} });
         });
 
         describe('form submit', () => {
@@ -104,15 +104,21 @@ describe('Views.MembershipChildForm', () => {
                 var stubbedTrigger: SinonStub;
 
                 before(() => {
-                    stubbedSave = sinon.stub(model, 'save').yieldsTo('success');
-                    stubbedTrigger = sinon.stub(Application.events, 'trigger', () => { });
+                    stubbedSave = sinon.stub(model, 'save')
+                        .yieldsTo('success');
+
+                    stubbedTrigger = sinon.stub(
+                        Application.events,
+                        'trigger',
+                        () => { });
 
                     view.successEvent = successEvent;
                     view.onSubmit(<any>{ preventDefault: () => { } });
                 });
 
                 it('triggers application success event', () => {
-                    expect(stubbedTrigger).to.have.been.calledWith(successEvent);
+                    expect(stubbedTrigger)
+                        .to.have.been.calledWith(successEvent);
                 });
 
                 after(() => {
@@ -127,8 +133,15 @@ describe('Views.MembershipChildForm', () => {
 
                 before(() => {
                     stubbedSave = sinon.stub(model, 'save').yieldsTo('error');
-                    stubbedHandleError = sinon.stub(view, 'handleError', () => { });
+                    stubbedHandleError = sinon.stub(
+                        view,
+                        'handleError',
+                        () => { });
                     view.onSubmit(<any>{ preventDefault: () => { } });
+                });
+
+                it('handles ajax error', () => {
+                    expect(stubbedHandleError).to.have.been.called;
                 });
 
                 after(() => {
@@ -166,7 +179,8 @@ describe('Views.Membership', () => {
 
     before(() => {
         originalSignInViewType = Membership.prototype.signInViewType;
-        originalForgotPasswordViewType = Membership.prototype.forgotPasswordViewType;
+        originalForgotPasswordViewType = Membership
+            .prototype.forgotPasswordViewType;
         originalSignUpViewType = Membership.prototype.signUpViewType;
         Membership.prototype.signInViewType = sinon.stub().returns({});
         Membership.prototype.forgotPasswordViewType = sinon.stub().returns({});
@@ -227,7 +241,10 @@ describe('Views.Membership', () => {
             originalCancelCallback = view.cancel;
             originalOkCallback = view.ok;
 
-            stubbedFirstTabTrigger = sinon.stub(view.firstTab, 'trigger', () => { });
+            stubbedFirstTabTrigger = sinon.stub(
+                view.firstTab,
+                'trigger',
+                () => { });
             stubbedModal = sinon.stub(view.$el, 'modal', () => { });
 
             cancelCallback = () => { };
@@ -317,9 +334,20 @@ describe('Views.Membership', () => {
         var originalCanceled: bool;
 
         before(() => {
-            stubbedResetFields = sinon.stub(view.$el, 'resetFields', () => view.$el);
-            stubbedHideSummaryError = sinon.stub(view.$el, 'hideSummaryError', () => view.$el);
-            stubbedHideFieldErrors = sinon.stub(view.$el, 'hideFieldErrors', () => view.$el);
+            stubbedResetFields = sinon.stub(
+                view.$el,
+                'resetFields',
+                () => view.$el);
+
+            stubbedHideSummaryError = sinon.stub(
+                view.$el,
+                'hideSummaryError',
+                () => view.$el);
+
+            stubbedHideFieldErrors = sinon.stub(
+                view.$el,
+                'hideFieldErrors',
+                () => view.$el);
 
             originalCanceled = view.canceled
             view.canceled = false

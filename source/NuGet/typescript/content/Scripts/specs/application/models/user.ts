@@ -42,7 +42,7 @@ describe('Models.User', () => {
                 confirmPassword: '$ecre8'
             }));
 
-            it('everything correct', () => {
+            it('is ok', () => {
                 expect(user.isValid()).to.be.ok;
             });
         });
@@ -100,7 +100,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('password');
+                        expect(user.validationError)
+                            .to.have.property('password');
                     });
                 });
 
@@ -113,7 +114,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('password');
+                        expect(user.validationError)
+                            .to.have.property('password');
                     });
                 });
 
@@ -126,7 +128,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('password');
+                        expect(user.validationError)
+                            .to.have.property('password');
                     });
                 });
 
@@ -139,7 +142,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('password');
+                        expect(user.validationError)
+                            .to.have.property('password');
                     });
                 });
             });
@@ -154,7 +158,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('confirmPassword');
+                        expect(user.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
 
@@ -167,7 +172,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('confirmPassword');
+                        expect(user.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
 
@@ -180,7 +186,8 @@ describe('Models.User', () => {
 
                     it('is invalid', () => {
                         expect(user.isValid()).to.not.be.ok;
-                        expect(user.validationError).to.have.property('confirmPassword');
+                        expect(user.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
             });

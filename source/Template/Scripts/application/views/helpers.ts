@@ -7,36 +7,38 @@
 module Application.Views {
     var $ = jQuery;
 
-    export function hasModelErrors(jqxhr: { status: number; }) {
-        return jqxhr.status === 400;
-    }
+    export var Helpers = {
+        hasModelErrors: (jqxhr: { status: number; }){
+            return jqxhr.status === 400;
+        },
 
-    export function getModelErrors(jqxhr: { responseText: string; }): Object {
-        var response: any;
+        getModelErrors: (jqxhr: { responseText: string; }): Object {
+            var response: any;
 
-        try {
-            response = $.parseJSON(jqxhr.responseText);
-        }
-        catch(e) {
-        }
+            try {
+                response = $.parseJSON(jqxhr.responseText);
+            }
+            catch(e) {
+            }
 
-        if (response) {
+            if (!response) {
+                return void (0);
+            }
+
             var modelStateProperty = <string>_.chain(response)
                 .keys()
                 .filter((key: string) => key.toLowerCase() === 'modelstate')
                 .first()
                 .value();
 
-            if (modelStateProperty) {
-                return response[modelStateProperty];
-            }
+            return modelStateProperty ?
+                response[modelStateProperty] :
+                void (0);
+        },
+
+        subscribeModelInvalidEvent: (model: Backbone.Model, el: JQuery) {
+            model.once('invalid', () =>
+                el.showFieldErrors({ errors: model.validationError }));
         }
-
-        return void(0);
-    }
-
-    export function subscribeModelInvalidEvent(model: Backbone.Model, el: JQuery) {
-        model.once('invalid', () =>
-            el.showFieldErrors({ errors: model.validationError }));
-    }
+    };
 }

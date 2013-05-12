@@ -46,7 +46,7 @@ var Application;
                     title: 'Home',
                     content: '<h4>Welcome to Backbone.js SPA</h4>' + '<p>Backbone.js SPA is starter kit template to develop ' + 'single page application with Backbone.js in ' + 'Microsoft Technology Stack. Some of the key ' + 'technology used in this template are:</p>' + '<ol>' + '<li><a href="http://backbonejs.org/">Backbone.js</a></li>' + '<li><a href="http://www.typescriptlang.org/">TypeScript</a></li>' + '<li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>' + '<li><a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a></li>' + '<li><a href="http://aboutcode.net/postal/">Postal</a></li>' + '<li><a href="http://www.asp.net/web-api">ASP.NET Web API</a></li>' + '<li><a href="http://www.asp.net/mvc">ASP.NET MVC</a></li>' + '<li>and many more...</li>' + '</ol>' + '<p>To get the latest update visit the ' + '<a href="https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa">Project Page</a> ' + 'or follow me <a href="https://twitter.com/manzurrashid">@manzurrashid</a>.</p>'
                 })
-            }).render();
+            });
             this.aboutView = new Application.Views.Page({
                 className: 'page',
                 template: pageTemplate,
@@ -54,8 +54,8 @@ var Application;
                     title: 'About',
                     content: 'Tell us about your app.'
                 })
-            }).render();
-            $('#container').prepend(this.homeView.$el, this.aboutView.$el);
+            });
+            $('#container').prepend(this.homeView.render().$el, this.aboutView.render().$el);
             this.notFoundView = new Application.Views.NotFound();
         };
         return Router;
