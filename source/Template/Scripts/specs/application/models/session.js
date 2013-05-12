@@ -28,7 +28,7 @@ describe('Models.Session', function () {
                     password: '$ecre8'
                 });
             });
-            it('everything correct', function () {
+            it('is ok', function () {
                 expect(session.isValid()).to.be.ok;
             });
         });

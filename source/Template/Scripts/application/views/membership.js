@@ -20,7 +20,7 @@ var Application;
                 e.preventDefault();
                 this.$el.hideSummaryError().hideFieldErrors();
                 var model = new this.modelType();
-                Views.subscribeModelInvalidEvent(model, this.$el);
+                Views.Helpers.subscribeModelInvalidEvent(model, this.$el);
                 model.save(this.$el.serializeFields(), {
                     success: function () {
                         return Application.events.trigger(_this.successEvent);
@@ -43,7 +43,7 @@ var Application;
 
             }
             SignIn.prototype.handleError = function (jqxhr) {
-                var message = Views.hasModelErrors(jqxhr) ? 'Invalid credentials.' : 'An unexpected error has occurred while signing in.';
+                var message = Views.Helpers.hasModelErrors(jqxhr) ? 'Invalid credentials.' : 'An unexpected error has occurred while signing in.';
                 this.$el.showSummaryError({
                     message: message
                 });
@@ -60,7 +60,7 @@ var Application;
                 _super.apply(this, arguments);
 
             }
-            ForgotPassword.prototype.handleError = function (jqxhr) {
+            ForgotPassword.prototype.handleError = function () {
                 this.$el.showSummaryError({
                     message: 'An unexpected error has occurred while ' + 'requesting password reset.'
                 });
@@ -78,8 +78,8 @@ var Application;
 
             }
             SignUp.prototype.handleError = function (jqxhr) {
-                if(Views.hasModelErrors(jqxhr)) {
-                    var modelErrors = Views.getModelErrors(jqxhr);
+                if(Views.Helpers.hasModelErrors(jqxhr)) {
+                    var modelErrors = Views.Helpers.getModelErrors(jqxhr);
                     if(modelErrors) {
                         return this.$el.showFieldErrors({
                             errors: modelErrors
@@ -137,10 +137,10 @@ var Application;
                 this.$el.putFocus();
             };
             Membership.prototype.onDialogHidden = function () {
-                if(this.canceled && _.isFunction(this.cancel)) {
+                if(this.canceled && this.cancel) {
                     this.cancel();
                 } else {
-                    if(_.isFunction(this.ok)) {
+                    if(this.ok) {
                         this.ok();
                     }
                 }

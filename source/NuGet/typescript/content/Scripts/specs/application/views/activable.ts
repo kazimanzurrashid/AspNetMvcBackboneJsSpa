@@ -44,12 +44,34 @@ describe('Views.Activable', () => {
 
         before((done) => {
             activable = new DummmyView();
-            stubbedClearTimer = sinon.stub(activable, 'clearAnimationTimer', () => { });
-            stubbedShow = sinon.stub(activable.$el, 'show', () => activable.$el);
+
+            stubbedClearTimer = sinon.stub(
+                activable,
+                'clearAnimationTimer',
+                () => { });
+
+            stubbedShow = sinon.stub(
+                activable.$el,
+                'show',
+                () => activable.$el);
+
             stubbedCss = sinon.stub(activable.$el, 'css', () => activable.$el);
-            stubbedOuterWidth = sinon.stub(activable.$el, 'outerWidth', () => 0);
-            stubbedHide = sinon.stub(activable.$el, 'hide', () => activable.$el);
-            stubbedAnimate = sinon.stub(activable.$el, 'animate', () => activable.$el);
+
+            stubbedOuterWidth = sinon.stub(
+                activable.$el,
+                'outerWidth',
+                () => 0);
+
+            stubbedHide = sinon.stub(
+                activable.$el,
+                'hide',
+                () => activable.$el);
+
+            stubbedAnimate = sinon.stub(
+                activable.$el,
+                'animate',
+                () => activable.$el);
+
             (<any>activable).activate();
 
             _.defer(() => {
@@ -68,7 +90,8 @@ describe('Views.Activable', () => {
         });
 
         it('moves the view to right', () => {
-            expect(stubbedCss).to.have.been.calledWith({ marginLeft: sinon.match.number });
+            expect(stubbedCss)
+                .to.have.been.calledWith({ marginLeft: sinon.match.number });
             expect(stubbedOuterWidth).to.have.been.calledOnce;
         });
 
@@ -81,7 +104,14 @@ describe('Views.Activable', () => {
         });
 
         it('animates the view from right to left', () => {
-            expect(stubbedAnimate).to.have.been.calledWith({ marginLeft: 0 }, sinon.match.number, sinon.match.func);
+            expect(stubbedAnimate)
+                .to
+                .have
+                .been
+                .calledWith(
+                    { marginLeft: 0 },
+                    sinon.match.number,
+                    sinon.match.func);
         });
 
         it('invokes #onActivate', () => {
@@ -96,7 +126,11 @@ describe('Views.Activable', () => {
         before(() => {
             activable = new DummmyView();
             stubbedHide = sinon.stub(activable.$el, 'hide', () => { });
-            stubbedClearTimer = sinon.stub(activable, 'clearAnimationTimer', () => { });
+            stubbedClearTimer = sinon.stub(
+                activable,
+                'clearAnimationTimer',
+                () => { });
+
             (<any>activable).deactivate();
         });
 

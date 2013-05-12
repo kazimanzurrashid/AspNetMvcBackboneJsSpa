@@ -31,15 +31,15 @@ var Application;
                 e.preventDefault();
                 this.changePasswordForm.hideSummaryError().hideFieldErrors();
                 var model = new this.changePasswordModelType();
-                Views.subscribeModelInvalidEvent(model, this.changePasswordForm);
+                Views.Helpers.subscribeModelInvalidEvent(model, this.changePasswordForm);
                 model.save(this.changePasswordForm.serializeFields(), {
                     success: function () {
                         _this.$el.modal('hide');
                         Application.events.trigger('passwordChanged');
                     },
                     error: function (m, jqxhr) {
-                        if(Views.hasModelErrors(jqxhr)) {
-                            var modelErrors = Views.getModelErrors(jqxhr);
+                        if(Views.Helpers.hasModelErrors(jqxhr)) {
+                            var modelErrors = Views.Helpers.getModelErrors(jqxhr);
                             if(modelErrors) {
                                 return _this.changePasswordForm.showFieldErrors({
                                     errors: modelErrors

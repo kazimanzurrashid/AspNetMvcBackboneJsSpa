@@ -32,7 +32,7 @@ describe('Models.ForgotPassword', () => {
                 email: 'user@example.com'
             }));
             
-            it('everything correct', () => {
+            it('is ok', () => {
                 expect(forgotPassword.isValid()).to.be.ok;
             });
         });
@@ -43,7 +43,8 @@ describe('Models.ForgotPassword', () => {
                 describe('missing', () => {
                     it('is invalid', () => {
                         expect(forgotPassword.isValid()).to.not.be.ok;
-                        expect(forgotPassword.validationError).to.have.property('email');
+                        expect(forgotPassword.validationError)
+                            .to.have.property('email');
                     });
                 });
 
@@ -54,7 +55,8 @@ describe('Models.ForgotPassword', () => {
 
                     it('is invalid', () => {
                         expect(forgotPassword.isValid()).to.not.be.ok;
-                        expect(forgotPassword.validationError).to.have.property('email');
+                        expect(forgotPassword.validationError)
+                            .to.have.property('email');
                     });
                 });
 
@@ -65,7 +67,8 @@ describe('Models.ForgotPassword', () => {
 
                     it('is invalid', () => {
                         expect(forgotPassword.isValid()).to.not.be.ok;
-                        expect(forgotPassword.validationError).to.have.property('email');
+                        expect(forgotPassword.validationError)
+                            .to.have.property('email');
                     });
                 });
             });

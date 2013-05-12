@@ -40,7 +40,7 @@ describe('Router', function () {
         });
         router = new Application.Router();
     });
-    describe('#new', function () {
+    describe('new', function () {
         it('creates navigation view', function () {
             expect(router.navigationView).to.exist;
         });
@@ -54,7 +54,7 @@ describe('Router', function () {
             expect(router.notFoundView).to.exist;
         });
     });
-    describe('navigation methods', function () {
+    describe('navigation', function () {
         var stubbedActivate;
         before(function () {
             stubbedActivate = sinon.stub(router, 'activate', function () {

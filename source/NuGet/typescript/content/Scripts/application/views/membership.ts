@@ -24,7 +24,7 @@ module Application.Views {
             this.$el.hideSummaryError().hideFieldErrors();
 
             var model = new this.modelType;
-            subscribeModelInvalidEvent(model, this.$el);
+            Helpers.subscribeModelInvalidEvent(model, this.$el);
 
             model.save(this.$el.serializeFields(), {
                 success: () => events.trigger(this.successEvent),
@@ -37,7 +37,7 @@ module Application.Views {
 
     export class SignIn extends MembershipChildForm {
         handleError(jqxhr: JQueryXHR) {
-            var message = hasModelErrors(jqxhr) ?
+            var message = Helpers.hasModelErrors(jqxhr) ?
                 'Invalid credentials.' :
                 'An unexpected error has occurred while signing in.';
             this.$el.showSummaryError({
@@ -51,7 +51,7 @@ module Application.Views {
     SignIn.prototype.successEvent = 'signedIn';
 
     export class ForgotPassword extends MembershipChildForm {
-        handleError(jqxhr: JQueryXHR) {
+        handleError() {
             this.$el.showSummaryError({
                 message: 'An unexpected error has occurred while ' +
                 'requesting password reset.'
@@ -65,8 +65,8 @@ module Application.Views {
 
     export class SignUp extends MembershipChildForm {
         handleError(jqxhr: JQueryXHR) {
-            if (hasModelErrors(jqxhr)) {
-                var modelErrors = getModelErrors(jqxhr);
+            if (Helpers.hasModelErrors(jqxhr)) {
+                var modelErrors = Helpers.getModelErrors(jqxhr);
                 if (modelErrors) {
                     return this.$el.showFieldErrors({
                         errors: modelErrors
@@ -149,10 +149,10 @@ module Application.Views {
         }
 
         onDialogHidden() {
-            if (this.canceled && _.isFunction(this.cancel)) {
+            if (this.canceled && this.cancel) {
                 this.cancel();
             }
-            else if (_.isFunction(this.ok)) {
+            else if (this.ok) {
                 this.ok();
             }
         }

@@ -21,7 +21,7 @@ describe('Models.ForgotPassword', function () {
                     email: 'user@example.com'
                 });
             });
-            it('everything correct', function () {
+            it('is ok', function () {
                 expect(forgotPassword.isValid()).to.be.ok;
             });
         });

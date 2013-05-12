@@ -46,7 +46,10 @@ module Application.Models {
                         'Password length must be between 6 to 64 characters.');
                 }
             } else {
-                Validation.addError(errors, 'password', 'Password is required.');
+                Validation.addError(
+                    errors,
+                    'password',
+                    'Password is required.');
             }
 
             if (attributes.confirmPassword) {

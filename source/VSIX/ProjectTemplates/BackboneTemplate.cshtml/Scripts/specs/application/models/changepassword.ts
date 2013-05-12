@@ -23,7 +23,8 @@ describe('Models.ChangePassword', () => {
         });
 
         it('has confirmPassword', () => {
-            expect(changePassword.defaults()).to.have.property('confirmPassword');
+            expect(changePassword.defaults())
+                .to.have.property('confirmPassword');
         });
     });
 
@@ -42,7 +43,7 @@ describe('Models.ChangePassword', () => {
                 confirmPassword: '$ecre8'
             }));
 
-            it('everything correct', () => {
+            it('is ok', () => {
                 expect(changePassword.isValid()).to.be.ok;
             });
         });
@@ -59,7 +60,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('oldPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('oldPassword');
                     });
                 });
 
@@ -72,7 +74,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('oldPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('oldPassword');
                     });
                 });
             });
@@ -87,7 +90,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('newPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('newPassword');
                     });
                 });
 
@@ -100,7 +104,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('newPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('newPassword');
                     });
                 });
 
@@ -113,7 +118,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('newPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('newPassword');
                     });
                 });
 
@@ -126,7 +132,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('newPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('newPassword');
                     });
                 });
             });
@@ -141,7 +148,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('confirmPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
 
@@ -154,7 +162,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('confirmPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
 
@@ -167,7 +176,8 @@ describe('Models.ChangePassword', () => {
 
                     it('is invalid', () => {
                         expect(changePassword.isValid()).to.not.be.ok;
-                        expect(changePassword.validationError).to.have.property('confirmPassword');
+                        expect(changePassword.validationError)
+                            .to.have.property('confirmPassword');
                     });
                 });
             });

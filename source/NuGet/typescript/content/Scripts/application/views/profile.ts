@@ -43,7 +43,7 @@ module Application.Views {
 
             var model = new this.changePasswordModelType;
 
-            subscribeModelInvalidEvent(model, this.changePasswordForm);
+            Helpers.subscribeModelInvalidEvent(model, this.changePasswordForm);
 
             model.save(this.changePasswordForm.serializeFields(), {
                 success: () => {
@@ -51,8 +51,8 @@ module Application.Views {
                     events.trigger('passwordChanged');
                 },
                 error: (m?, jqxhr?: JQueryXHR) {
-                    if (hasModelErrors(jqxhr)) {
-                        var modelErrors = getModelErrors(jqxhr);
+                    if (Helpers.hasModelErrors(jqxhr)) {
+                        var modelErrors = Helpers.getModelErrors(jqxhr);
                         if (modelErrors) {
                             return this.changePasswordForm.showFieldErrors({
                                 errors: modelErrors

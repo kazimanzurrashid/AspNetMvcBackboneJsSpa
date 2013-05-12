@@ -29,7 +29,9 @@ describe('Models.Validation', function () {
     });
     describe('.isValidPasswordLength', function () {
         describe('valid', function () {
-            expect(Validation.isValidPasswordLength('$ecre8')).to.be.ok;
+            it('returns true', function () {
+                expect(Validation.isValidPasswordLength('$ecre8')).to.be.ok;
+            });
         });
         describe('invalid', function () {
             describe('less than six characters', function () {

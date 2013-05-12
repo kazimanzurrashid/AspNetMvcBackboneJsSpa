@@ -83,6 +83,7 @@ describe('Application', () => {
                 before(() => {
                     stubbedShowInfoBar = sinon.stub($, 'showInfobar', () => { });
                     stubbedDelay = sinon.stub(_, 'delay');
+                    stubbedDelay.withArgs(sinon.match.func, sinon.match.number);
                 });
 
                 describe('myAccount', () => {
@@ -139,13 +140,78 @@ describe('Application', () => {
                     });
                 });
 
+                describe('passwordResetRequested', () => {
+                    before(() => {
+                        Application.events.trigger('passwordResetRequested');
+                        stubbedDelay.callArg(0);
+                    });
+
+                    it('shows info bar', () => {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+
+                    after(() => {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+
+                describe('signedUp', () => {
+                    before(() => {
+                        Application.events.trigger('signedUp');
+                        stubbedDelay.callArg(0);
+                    });
+
+                    it('shows info bar', () => {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+
+                    after(() => {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+
+                describe('passwordChanged', () => {
+                    before(() => {
+                        Application.events.trigger('passwordChanged');
+                        stubbedDelay.callArg(0);
+                    });
+
+                    it('shows info bar', () => {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+
+                    after(() => {
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+
+                describe('signedOut', () => {
+                    before(() => {
+                        Application.userSignnedIn = true;
+                        Application.events.trigger('signedOut');
+                        stubbedDelay.callArg(0);
+                    });
+
+                    it('sets #userSignnedIn to false', () => {
+                        expect(Application.userSignnedIn).to.be.false;
+                    });
+
+                    it('shows info bar', () => {
+                        expect(stubbedShowInfoBar).to.have.been.called;
+                    });
+
+                    after(() => {
+                        Application.userSignnedIn = false;
+                        stubbedShowInfoBar.reset();
+                    });
+                });
+
                 after(() => {
                     stubbedShowInfoBar.restore();
                     stubbedDelay.restore();
                 });
             })
         });
-
 
         it('creates router', () => {
             expect(Application.router).to.exist;

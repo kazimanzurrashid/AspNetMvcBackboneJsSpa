@@ -37,16 +37,16 @@ describe('Views.Profile', function () {
             view.onShowProfile();
         });
         it('resets forms fields', function () {
-            return expect(stubbedResetFields).to.have.been.calledOnce;
+            expect(stubbedResetFields).to.have.been.calledOnce;
         });
         it('hides form summary errors', function () {
-            return expect(stubbedHideSummaryError).to.have.been.calledOnce;
+            expect(stubbedHideSummaryError).to.have.been.calledOnce;
         });
         it('hides form fields errors', function () {
-            return expect(stubbedHideFieldErrors).to.have.been.calledOnce;
+            expect(stubbedHideFieldErrors).to.have.been.calledOnce;
         });
         it('shows modal dialog', function () {
-            return expect(stubbedModal).to.have.been.calledWith('show');
+            expect(stubbedModal).to.have.been.calledWith('show');
         });
         after(function () {
             stubbedResetFields.restore();
@@ -82,9 +82,11 @@ describe('Views.Profile', function () {
             stubbedHideFieldErrors = sinon.stub(view.changePasswordForm, 'hideFieldErrors', function () {
                 return view.changePasswordForm;
             });
-            stubbedSubscribeModelInvalidEvent = sinon.stub(Application.Views, 'subscribeModelInvalidEvent', function () {
+            stubbedSubscribeModelInvalidEvent = sinon.stub(Application.Views.Helpers, 'subscribeModelInvalidEvent', function () {
             });
             stubbedSerializeFields = sinon.stub(view.changePasswordForm, 'serializeFields', function () {
+                return {
+                };
             });
             model = {
                 once: function () {
@@ -161,10 +163,10 @@ describe('Views.Profile', function () {
                     var stubbedShowFieldErrors;
                     var stubbedSave;
                     before(function () {
-                        stubbedHasModelErrors = sinon.stub(Application.Views, 'hasModelErrors', function () {
+                        stubbedHasModelErrors = sinon.stub(Application.Views.Helpers, 'hasModelErrors', function () {
                             return true;
                         });
-                        stubbedGetModelErrors = sinon.stub(Application.Views, 'getModelErrors', function () {
+                        stubbedGetModelErrors = sinon.stub(Application.Views.Helpers, 'getModelErrors', function () {
                             return {
                             };
                         });
@@ -191,7 +193,7 @@ describe('Views.Profile', function () {
                     var stubbedShowSummaryError;
                     var stubbedSave;
                     before(function () {
-                        stubbedHasModelErrors = sinon.stub(Application.Views, 'hasModelErrors', function () {
+                        stubbedHasModelErrors = sinon.stub(Application.Views.Helpers, 'hasModelErrors', function () {
                             return false;
                         });
                         stubbedShowSummaryError = sinon.stub(view.changePasswordForm, 'showSummaryError', function () {

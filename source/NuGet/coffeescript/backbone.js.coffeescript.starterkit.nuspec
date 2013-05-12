@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>backbone.js.coffeescript.starterkit</id>
+    <version>1.0.0-beta3</version>
+    <title>Backbone.js CoffeeScript Starter Kit</title>
+    <authors>Kazi Manzur Rashid</authors>
+    <owners>Kazi Manzur Rashid</owners>
+    <projectUrl>https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa</projectUrl>
+    <iconUrl>https://raw.github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa/master/logo-32x32.png</iconUrl>
+    <description>Backbone.js CoffeeScript Starter Kit</description>
+    <tags>aspnetmvc backbone spa coffeescript starter</tags>
+    <dependencies>
+      <dependency id="Backbone.js" version="1.0.0" />
+      <dependency id="EntityFramework" version="5.0.0" />
+      <dependency id="FontAwesome.less" version="3.0.4" />
+      <dependency id="json2" version="1.0.2" />
+      <dependency id="Microsoft.AspNet.Mvc.FixedDisplayModes" version="1.0.1" />
+      <dependency id="Microsoft.AspNet.Web.Optimization" version="1.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi" version="4.0.20710.0" />
+      <dependency id="Microsoft.AspNet.WebPages.WebData" version="2.0.20710.0" />
+      <dependency id="MochaChaiBdd" version="1.0.9" />
+      <dependency id="Modernizr" version="2.6.2" />
+      <dependency id="Newtonsoft.Json" version="5.0.5" />
+      <dependency id="postal" version="0.8.2" />
+      <dependency id="underscore.TypeScript.DefinitelyTyped" version="0.0.8" />
+      <dependency id="WebActivator" version="1.5.3" />
+    </dependencies>
+  </metadata>
+</package>

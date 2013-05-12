@@ -41,7 +41,7 @@ describe('Models.Session', () => {
                 password: '$ecre8'
             }));
 
-            it('everything correct', () => {
+            it('is ok', () => {
                 expect(session.isValid()).to.be.ok;
             });
         });
@@ -57,7 +57,8 @@ describe('Models.Session', () => {
 
                     it('is invalid', () => {
                         expect(session.isValid()).to.not.be.ok;
-                        expect(session.validationError).to.have.property('email');
+                        expect(session.validationError)
+                            .to.have.property('email');
                     });
                 });
 
@@ -69,7 +70,8 @@ describe('Models.Session', () => {
 
                     it('is invalid', () => {
                         expect(session.isValid()).to.not.be.ok;
-                        expect(session.validationError).to.have.property('email');
+                        expect(session.validationError)
+                            .to.have.property('email');
                     });
                 });
             });
@@ -83,7 +85,8 @@ describe('Models.Session', () => {
 
                     it('is invalid', () => {
                         expect(session.isValid()).to.not.be.ok;
-                        expect(session.validationError).to.have.property('password');
+                        expect(session.validationError)
+                            .to.have.property('password');
                     });
                 });
 
@@ -95,7 +98,8 @@ describe('Models.Session', () => {
 
                     it('is invalid', () => {
                         expect(session.isValid()).to.not.be.ok;
-                        expect(session.validationError).to.have.property('password');
+                        expect(session.validationError)
+                            .to.have.property('password');
                     });
                 });
             });
