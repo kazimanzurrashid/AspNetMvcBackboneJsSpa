@@ -9,8 +9,9 @@ Sign-up, Sign-in, Password reset, User confirmation etc. with basic email
 templates.
 
 ## Download
-- [NuGet Package](https://nuget.org/packages/backbone.js.typescript.starterkit/)
-- [VSIX Extension](http://www.asp.net/single-page-application/overview/templates/backbonejs-template)
+- [NuGet Package - TypeScript](https://nuget.org/packages/backbone.js.typescript.starterkit/)
+- [NuGet Package - CoffeeScript](https://nuget.org/packages/backbone.js.coffeescript.starterkit/)
+- [VSIX Extension - TypeScript](http://www.asp.net/single-page-application/overview/templates/backbonejs-template)
 
 ## Features
 - ASP.NET MVC
