@@ -6,16 +6,22 @@
     <sharedPath>$(MSBuildProjectDirectory)\_shared</sharedPath>
     <typescriptPath>$(MSBuildProjectDirectory)\typescript</typescriptPath>
     <coffeescriptPath>$(MSBuildProjectDirectory)\coffeescript</coffeescriptPath>
+    <javascriptPath>$(MSBuildProjectDirectory)\javascript</javascriptPath>
     <NuGet>$(MSBuildProjectDirectory)\..\.nuget\NuGet.exe</NuGet>
   </PropertyGroup>
-  <Target Name="Full" DependsOnTargets="Init;CreateTypeScript;CreateCoffeeScript;Cleanup"/>
+  <ItemGroup>
+    <sharedFiles Include="$(sharedPath)\**\*.*"/>
+  </ItemGroup>
+  <Target
+    Name="Full"
+    DependsOnTargets="Init;CreateTypeScript;CreateCoffeeScript;CreateJavaScript;Cleanup"
+  />
   <Target Name="Init">
     <MakeDir Directories="$(dropPath)" Condition="!Exists('$(dropPath)')"/>
     <MakeDir Directories="$(tempPath)" Condition="!Exists('$(tempPath)')"/>
   </Target>
   <Target Name="CreateTypeScript" DependsOnTargets="Init">
     <ItemGroup>
-      <sharedFiles Include="$(sharedPath)\**\*.*"/>
       <tsSourceFiles Include="$(typescriptPath)\**\*.*"/>
     </ItemGroup>
     <Copy
@@ -34,7 +40,6 @@
   </Target>
   <Target Name="CreateCoffeeScript" DependsOnTargets="Init">
     <ItemGroup>
-      <sharedFiles Include="$(sharedPath)\**\*.*"/>
       <csSourceFiles Include="$(coffeescriptPath)\**\*.*"/>
     </ItemGroup>
     <Copy
@@ -50,6 +55,24 @@
       WorkingDirectory="$(dropPath)"
     />
     <RemoveDir Directories="$(tempPath)\cs"/>
+  </Target>
+  <Target Name="CreateJavaScript" DependsOnTargets="Init">
+    <ItemGroup>
+      <jsSourceFiles Include="$(javascriptPath)\**\*.*"/>
+    </ItemGroup>
+    <Copy
+      SourceFiles="@(sharedFiles)"
+      DestinationFiles="@(sharedFiles->'$(tempPath)\js\%(RecursiveDir)%(Filename)%(Extension)')"
+    /> 
+    <Copy
+      SourceFiles="@(jsSourceFiles)"
+      DestinationFiles="@(jsSourceFiles->'$(tempPath)\js\%(RecursiveDir)%(Filename)%(Extension)')"
+    />
+    <Exec
+      Command="&quot;$(NuGet)&quot; pack &quot;$(tempPath)\js\backbone.js.javascript.starterkit.nuspec&quot;"
+      WorkingDirectory="$(dropPath)"
+    />
+    <RemoveDir Directories="$(tempPath)\js"/>
   </Target>
   <Target Name="Cleanup">
     <RemoveDir Directories="$(tempPath)" Condition="Exists('$(tempPath)')"/>
