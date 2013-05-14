@@ -27,4 +27,4 @@ var Application;
         }
     });
 
-})(jQuery, Backbone, Application);
+})(jQuery, Backbone, Application || (Application = {}));

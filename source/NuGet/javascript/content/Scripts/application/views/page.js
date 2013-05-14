@@ -17,4 +17,4 @@ var Application;
 
     _.extend(Views.Page.prototype, Views.Activable);
 
-})(_, Backbone, Application);
+})(_, Backbone, Application || (Application = {}));

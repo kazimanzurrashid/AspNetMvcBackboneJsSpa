@@ -9,4 +9,4 @@ var Application;
 
     _.extend(Views.NotFound.prototype, Views.Activable);
 
-})(_, Backbone, Application);
+})(_, Backbone, Application || (Application = {}));
