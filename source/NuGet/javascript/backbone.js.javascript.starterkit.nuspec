@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>backbone.js.javascript.starterkit</id>
-    <version>1.0.0-rc</version>
+    <version>1.0.0</version>
     <title>Backbone.js JavaScript Starter Kit</title>
     <authors>Kazi Manzur Rashid</authors>
     <owners>Kazi Manzur Rashid</owners>
