@@ -56,9 +56,9 @@
                                      .GetDirectory(viewTemplateFolder)
                                      .Files
                                      .Cast<VirtualFileBase>()
-                                     .Where(vfd =>
-                                            (vfd.Name != null) &&
-                                            !vfd.Name.StartsWith(Prefix, StringComparison.Ordinal))
+                                     .Where(vfb =>
+                                            (vfb.Name != null) &&
+                                            !vfb.Name.StartsWith(Prefix, StringComparison.Ordinal))
                                      .Select(vfd => vfd.VirtualPath)
                                      .ToList();
         }
