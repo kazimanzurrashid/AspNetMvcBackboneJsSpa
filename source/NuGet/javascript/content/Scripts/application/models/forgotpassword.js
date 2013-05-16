@@ -32,4 +32,5 @@ var Application;
             return _.isEmpty(errors) ? void(0) : errors;
         }
     });
+
 })(_, Backbone, Application || (Application = {}));

@@ -39,4 +39,5 @@ var Application;
             }
         }
     };
+
 })(_, Application || (Application = {}));

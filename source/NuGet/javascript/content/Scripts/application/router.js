@@ -84,4 +84,5 @@ var Application;
             this.notFoundView = new Application.Views.NotFound();
         }
     });
+
 })(jQuery, _, Backbone, Application || (Application = {}));

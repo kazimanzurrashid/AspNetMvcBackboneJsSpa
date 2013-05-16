@@ -42,4 +42,5 @@ var Application;
             });
         }
     };
+
 })(jQuery, _, Application || (Application = {}));
