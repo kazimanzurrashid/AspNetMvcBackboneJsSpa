@@ -1,4 +1,4 @@
-# Backbone.js SPA (Single Page Application) Template
+# Backbone.js SPA (Single Page Application) Starter Kit/Template
 
 Backbone.js SPA is template for ASP.NET MVC 4. It is enhanced with the
 Twitter Bootstrap and Font Awesome.
@@ -7,6 +7,9 @@ The goal of the project is to provide the initial skeleton when developing
 Backbone.js application in ASP.NET MVC. Out of the box it provides User
 Sign-up, Sign-in, Password reset, User confirmation etc. with basic email
 templates.
+
+## Sample
+- [My Walletz](https://github.com/kazimanzurrashid/my-walletz-backbone) - Purely CRUD Application created with this template.
 
 ## Download
 - [NuGet Package - JavaScript](https://nuget.org/packages/backbone.js.javascript.starterkit/)
