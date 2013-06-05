@@ -4,7 +4,7 @@ describe('Models.Session', function() {
     var session;
 
     beforeEach(function() {
-        return session = new Application.Models.Session();
+        session = new Application.Models.Session();
     });
 
     describe('#defaults', function() {
@@ -31,7 +31,7 @@ describe('Models.Session', function() {
 
         describe('valid', function() {
             beforeEach(function() {
-                return session.set({
+                session.set({
                     email: 'user@example.com',
                     password: '$ecre8'
                 });
@@ -48,7 +48,7 @@ describe('Models.Session', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return session.set({
+                        session.set({
                             password: '$ecre8'
                         });
                     });
@@ -63,7 +63,7 @@ describe('Models.Session', function() {
                 describe('blank', function() {
 
                     beforeEach(function() {
-                        return session.set({
+                        session.set({
                             email: '',
                             password: '$ecre8'
                         });
@@ -81,7 +81,7 @@ describe('Models.Session', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return session.set({
+                        session.set({
                             email: 'user@example.com'
                         });
                     });
@@ -95,7 +95,7 @@ describe('Models.Session', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return session.set({
+                        session.set({
                             email: 'user@example.com',
                             password: ''
                         });

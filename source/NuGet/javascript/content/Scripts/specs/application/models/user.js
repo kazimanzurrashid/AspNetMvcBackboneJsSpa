@@ -4,7 +4,7 @@ describe('Models.User', function() {
     var user;
 
     beforeEach(function() {
-        return user = new Application.Models.User();
+        user = new Application.Models.User();
     });
 
     describe('#defaults', function() {
@@ -28,7 +28,7 @@ describe('Models.User', function() {
     describe('validation', function() {
         describe('valid', function() {
             beforeEach(function() {
-                return user.set({
+                user.set({
                     email: 'user@example.com',
                     password: '$ecre8',
                     confirmPassword: '$ecre8'
@@ -45,7 +45,7 @@ describe('Models.User', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             password: '$ecre8',
                             confirmPassword: '$ecre8'
                         });
@@ -59,7 +59,7 @@ describe('Models.User', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: '',
                             password: '$ecre8',
                             confirmPassword: '$ecre8'
@@ -74,7 +74,7 @@ describe('Models.User', function() {
 
                 describe('incorrect format', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'foo-bar',
                             password: '$ecre8',
                             confirmPassword: '$ecre8'
@@ -92,7 +92,7 @@ describe('Models.User', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             confirmPassword: '$ecre8'
                         });
@@ -107,7 +107,7 @@ describe('Models.User', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: '',
                             confirmPassword: '$ecre8'
@@ -123,7 +123,7 @@ describe('Models.User', function() {
 
                 describe('less than minimum length', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: repeatString(5),
                             confirmPassword: repeatString(5)
@@ -139,7 +139,7 @@ describe('Models.User', function() {
 
                 describe('more than maximum length', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: repeatString(65),
                             confirmPassword: repeatString(65)
@@ -158,7 +158,7 @@ describe('Models.User', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: '$ecre8'
                         });
@@ -172,7 +172,7 @@ describe('Models.User', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: '$ecre8',
                             confirmPassword: ''
@@ -188,7 +188,7 @@ describe('Models.User', function() {
 
                 describe('do not match', function() {
                     beforeEach(function() {
-                        return user.set({
+                        user.set({
                             email: 'user@example.com',
                             password: '$ecre8',
                             confirmPassword: 'foo-bar'

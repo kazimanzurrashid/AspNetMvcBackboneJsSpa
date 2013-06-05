@@ -4,7 +4,7 @@ describe('Models.ChangePassword', function() {
     var changePassword;
 
     beforeEach(function() {
-        return changePassword = new Application.Models.ChangePassword();
+        changePassword = new Application.Models.ChangePassword();
     });
 
     describe('#defaults', function() {
@@ -31,7 +31,7 @@ describe('Models.ChangePassword', function() {
 
         describe('valid', function() {
             beforeEach(function() {
-                return changePassword.set({
+                changePassword.set({
                     oldPassword: 'secret',
                     newPassword: '$ecre8',
                     confirmPassword: '$ecre8'
@@ -49,7 +49,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             newPassword: '$ecre8',
                             confirmPassword: '$ecre8'
                         });
@@ -64,7 +64,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: '',
                             newPassword: '$ecre8',
                             confirmPassword: '$ecre8'
@@ -83,7 +83,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             confirmPassword: '$ecre8'
                         });
@@ -98,7 +98,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: '',
                             confirmPassword: '$ecre8'
@@ -114,7 +114,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('less than minimum length', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: repeatString(5),
                             confirmPassword: repeatString(5)
@@ -130,7 +130,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('more than maximum length', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: repeatString(65),
                             confirmPassword: repeatString(65)
@@ -149,7 +149,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('missing', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: '$ecre8'
                         });
@@ -164,7 +164,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: '$ecre8',
                             confirmPassword: ''
@@ -180,7 +180,7 @@ describe('Models.ChangePassword', function() {
 
                 describe('do not match', function() {
                     beforeEach(function() {
-                        return changePassword.set({
+                        changePassword.set({
                             oldPassword: 'secret',
                             newPassword: '$ecre8',
                             confirmPassword: 'foo-bar'

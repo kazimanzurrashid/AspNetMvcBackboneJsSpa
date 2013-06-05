@@ -4,7 +4,7 @@ describe('Models.ForgotPassword', function() {
     var forgotPassword;
 
     beforeEach(function() {
-        return forgotPassword = new Application.Models.ForgotPassword();
+        forgotPassword = new Application.Models.ForgotPassword();
     });
 
     describe('#defaults', function() {
@@ -22,8 +22,8 @@ describe('Models.ForgotPassword', function() {
     describe('validation', function() {
 
         describe('valid', function() {
-            beforeEach(function() {
-                return forgotPassword.set({
+            beforeEach(function () {
+                forgotPassword.set({
                     email: 'user@example.com'
                 });
             });
@@ -47,7 +47,7 @@ describe('Models.ForgotPassword', function() {
 
                 describe('blank', function() {
                     beforeEach(function() {
-                        return forgotPassword.set({
+                        forgotPassword.set({
                             email: ''
                         });
                     });
@@ -61,7 +61,7 @@ describe('Models.ForgotPassword', function() {
 
                 describe('incorrect format', function() {
                     beforeEach(function() {
-                        return forgotPassword.set({
+                        forgotPassword.set({
                             email: 'foo-bar'
                         });
                     });

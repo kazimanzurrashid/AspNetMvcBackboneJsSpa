@@ -76,15 +76,30 @@
                     ModelState);
             }
 
-            var success = changePassword(
-                User.Identity.Name,
-                model.OldPassword,
-                model.NewPassword);
+            try
+            {
+                if (changePassword(
+                    User.Identity.Name,
+                    model.OldPassword,
+                    model.NewPassword))
+                {
+                    return Request.CreateResponse(HttpStatusCode.NoContent);
+                }
 
-            return Request.CreateResponse(
-                success ?
-                HttpStatusCode.NoContent :
-                HttpStatusCode.BadRequest);
+                ModelState.AddModelError(
+                    "oldPassword",
+                    "Old password does not match existing password.");
+            }
+            catch (ArgumentException)
+            {
+                ModelState.AddModelError(
+                    "newPassword",
+                    "New password does not meet password rule.");
+            }
+
+            return Request.CreateErrorResponse(
+                HttpStatusCode.BadRequest,
+                ModelState);
         }
     }
 }

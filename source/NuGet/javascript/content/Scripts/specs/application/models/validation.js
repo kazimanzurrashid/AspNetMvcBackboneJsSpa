@@ -7,9 +7,7 @@ describe('Models.Validation', function() {
         var errors;
 
         beforeEach(function() {
-            errors = {
-                
-            };
+            errors = { };
             Validation.addError(errors, 'name', 'Name is required.');
         });
 
