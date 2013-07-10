@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="BackboneJS..f99e35a4-46a9-4182-bd1a-f7df044f5830" Version="1.2" Language="en-US" Publisher="Kazi Manzur Rashid" />
+    <Identity Id="BackboneJS..f99e35a4-46a9-4182-bd1a-f7df044f5830" Version="1.3" Language="en-US" Publisher="Kazi Manzur Rashid" />
     <DisplayName>BackboneJS SPA Template</DisplayName>
     <Description xml:space="preserve">Backbone.js SPA Template for ASP.NET MVC 4.</Description>
     <MoreInfo>https://github.com/kazimanzurrashid/AspNetMvcBackboneJsSpa</MoreInfo>
@@ -9,9 +9,9 @@
     <PreviewImage>ProjectTemplates\backbone.png</PreviewImage>
     <Tags>Backbone.js Twitter Bootstrap FontAwesome SPA TypeScript</Tags>
   </Metadata>
-  <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="11.0" />
-    <InstallationTarget Version="[11.0,12.0)" Id="Microsoft.VisualStudio.VWDExpress" />
+  <Installation AllUsers="true">
+    <InstallationTarget Version="[11.0,12.0]" Id="Microsoft.VisualStudio.Pro" />
+    <InstallationTarget Version="[11.0,12.0]" Id="Microsoft.VisualStudio.VWDExpress" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
@@ -29,160 +29,160 @@
            Description="An ASP.NET MVC 4 project for building single page application (SPA) with Backbone.js."
            Version="4.0"
     />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\FilterConfig.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\RouteConfig.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\StarterKitConfig.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\WebApiConfig.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\FilterConfig.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\RouteConfig.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\StarterKitConfig.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\App_Start\WebApiConfig.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Content\application.less" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Content\application.css" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Content\application.less" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Content\application.css" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\HomeController.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsController.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SessionsController.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SupportsController.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\UsersController.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\HomeController.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\PasswordsController.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SessionsController.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\SupportsController.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Controllers\UsersController.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Helpers\ClientViewExtensions.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Helpers\UrlHelperExtensions.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Helpers\ClientViewExtensions.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Helpers\UrlHelperExtensions.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessages.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessageType.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\Mailer.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\MailUrlResolver.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessages.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\FlashMessageType.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\Mailer.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Infrastructure\MailUrlResolver.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ChangePassword.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateSession.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateUser.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ForgotPassword.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ResetPassword.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\User.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\UsersContext.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummary.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ChangePassword.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateSession.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\CreateUser.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ForgotPassword.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ResetPassword.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\User.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\UsersContext.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Models\ValidationSummary.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Properties\AssemblyInfo.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Properties\AssemblyInfo.cs" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\confirm.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\flashbar.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\lib\form.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\changepassword.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\forgotpassword.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\session.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\user.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\models\validation.ts" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\activable.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\helpers.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\membership.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\navigation.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\notfound.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\page.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\views\profile.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.d.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.d.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\application.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\events.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\application\router.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\changepassword.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\forgotpassword.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\session.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\user.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\models\validation.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\activable.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\helpers.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\membership.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\navigation.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\notfound.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\page.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\views\profile.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.js" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\application.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\application\router.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\navigation.html" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\profile.html" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\navigation.html" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\fixtures\profile.html" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.ts" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.ts" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\specs\helpers.js" />
     
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\_config.js" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Scripts\_config.js" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ChangePassword.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ForgotPassword.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignIn.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignOut.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignUp.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Membership.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\NotFound.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Profile.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ChangePassword.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_ForgotPassword.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignIn.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignOut.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\_SignUp.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Membership.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\NotFound.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\ClientViews\Profile.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\_ViewStart.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Html.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Text.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Html.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Text.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\_ViewStart.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Html.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\ForgotPassword.Text.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Html.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Emails\UserConfirmation.Text.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Index.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Navigation.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Index.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Home\Navigation.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Mocha\Index.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Mocha\Index.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\_Layout.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Error.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Flashbar.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Footer.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Head.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\LegacyIE.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Scripts.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\ValidationSummary.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\_Layout.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Error.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Flashbar.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Footer.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Head.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\LegacyIE.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\Scripts.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Shared\ValidationSummary.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Supports\ResetPassword.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Supports\ResetPassword.cshtml" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\_ViewStart.cshtml" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Web.config" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\_ViewStart.cshtml" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Views\Web.config" />
 
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\favicon.ico" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Global.asax" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Global.asax.cs" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.config" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.Debug.config" />
-    <Asset Type="Microsoft.VisualStudio.Mvc.Templates" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.Release.config" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\favicon.ico" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Global.asax" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Global.asax.cs" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.config" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.Debug.config" />
+    <Asset Type="Microsoft.VisualStudio.Mvc.Template" d:Source="File" Path="ProjectTemplates\BackboneTemplate.cshtml\Web.Release.config" />
   </Assets>
 </PackageManifest>
