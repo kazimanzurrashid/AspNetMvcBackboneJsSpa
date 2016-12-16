@@ -27,7 +27,7 @@ templates.
 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 - [Postal](http://aboutcode.net/postal)
 - Client Side Test
-  - [Mocha](http://visionmedia.github.io/mocha/)
+  - [Mocha](http://mochajs.org/)
   - [Chai](http://chaijs.com/)
   - [Sinon](http://sinonjs.org/)
 
